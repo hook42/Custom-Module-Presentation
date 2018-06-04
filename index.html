@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+	<img src="images/Hook42Logo.png" style="margin: 2rem; height: 7%; position: absolute;" />
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Custom Modules</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/hook42.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section class="present" style="top: 226px; display: block;">
+					<h1 class="text__dark text__bold">
+						Drupal 8 Custom Module Architecture </h1>
+						<h3>What’s Going On? </h3>
+					<p class="fragment">Lindsay Gaudinier at Hook 42</p>
+				</section>
+
+				<section>
+					<h3>About me</h3>
+					<ul>
+						<li class="fragment">Developer at Hook 42</li>
+						<li class="fragment">Swimming, cats, and the internet</li>
+					</ul>
+					<div>
+						<img src="images/dude.png" class="fragment" style="width: 250px;">
+					</div>
+
+				</section>
+
+				<section>
+					<h3>The Thought Behind the Talk</h3>
+					<ul class="font-25">
+						<li class="fragment"> I had to create a custom module for the first time, and I had only modified code in the past</li>
+						<li class="fragment ol-image">
+							<img src="images/noideawhatsgoingon.gif" />
+						</li>
+						<li class="fragment">I didn't want to just know how to make a custom module, I wanted to know the answers to all my why questions</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>The Module Skeleton</h3>
+					<img src="images/skeleton.gif" style="width: 400px;"/>
+				</section>
+
+				<section>
+					<h3>All the Files!</h3>
+					<p class="font-20">We are naming our module "Capable", because we are all capable of making a custom module</p>
+					<div class="module-files">
+<pre>
+	modules
+		/contrib
+		/custom
+			/capable
+				capable.api.php
+				capable.data.inc
+				capable.info.yml
+				capable.libraries.yml
+				capable.links.menu.yml
+				capable.module
+				capable.permissions.yml
+				capable.routing.yml
+				capable.services.yml
+				capable.task.yml
+				/css
+				/js
+				/src
+					/Controller
+						CapableController.php
+					/Form
+						SignUpForm.php (might need to fix this)
+
+</pre>
+					</div>
+				</section>
+
+				<section>
+						http://cgit.drupalcode.org/examples/tree/?h=8.x-1.x
+				</section>
+
+				<section>
+					<h3>Namespaces</h3>
+				</section>
+
+				<section>
+					<h3>Questions?</h3>
+					<img src="images/questions.gif" style="width: 500px;">
+				</section>
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+				slideNumber: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
