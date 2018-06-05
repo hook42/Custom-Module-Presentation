@@ -61,14 +61,17 @@
 				</section>
 
 				<section>
-					<h3>All the Files!</h3>
-					<p class="font-20">We are naming our module "Capable", because we are all capable of making a custom module</p>
+					<h3>Capable Module</h3>
 					<div class="module-files">
 <pre>
 	modules
 		/contrib
 		/custom
 			/capable
+				.estlintrc
+				README.md
+				STANDARDS.md
+				TESTING.md
 				capable.api.php
 				capable.data.inc
 				capable.info.yml
@@ -79,13 +82,27 @@
 				capable.routing.yml
 				capable.services.yml
 				capable.task.yml
+				composer.json
+				/config
+					/install
+						capable.settings.yml
+					/schema
+						capable.schema.yml
 				/css
+					main.css
+				drupalci.yml
 				/js
+					main.js
 				/src
 					/Controller
 						CapableController.php
+					/Entity
+						Robot.php
 					/Form
 						SignUpForm.php (might need to fix this)
+				/templates
+					homepage.html.twig
+				/tests
 
 </pre>
 					</div>
