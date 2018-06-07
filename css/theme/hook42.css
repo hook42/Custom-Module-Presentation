@@ -150,8 +150,15 @@ body {
   font-style: italic; }
 
 .reveal pre {
+  display: block;
+  position: relative;
+  width: 90%;
+  margin: 20px auto;
   text-align: left;
-  font-size: 12px;
+  font-size: 0.55em;
+  font-family: monospace;
+  line-height: 1.2em;
+  word-wrap: break-word;
   box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3); }
 
 .reveal code {
@@ -323,7 +330,9 @@ body {
 .reveal .text__bold {
   font-weight: 500; }
 
-/** Lindsay Styling **/
+.reveal .module-files {
+  font-size: 25px; }
+
 .reveal .slide-number {
   position: fixed;
   display: block;
@@ -338,6 +347,9 @@ body {
   border-radius: 20px;
   padding: 7px;
   min-width: 12px; }
+
+.reveal .smaller-font {
+  font-size: 30px; }
 
 .reveal .font-25 {
   font-size: 25px; }
@@ -357,11 +369,10 @@ body {
 .reveal .font-10 {
   font-size: 10px; }
 
-.reveal .ol-image {
-  list-style-type: none;
-  text-align: center;
-}
+.reveal .left {
+  float: left;
+  width: 49%; }
 
-.reveal .module-files {
-  font-size: 25px;
-}
+.reveal .right {
+  float: right;
+  width: 49%; }
