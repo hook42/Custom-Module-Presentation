@@ -56,6 +56,44 @@
 				</section>
 
 				<section>
+					<h3>Vocabulary Time</h3>
+					<ul>
+						<li class="fragment">
+							Types of files:
+							<ul>
+								<li>
+									YAML (YAML Ain't Markup Language): .yml, .yaml
+								</li>
+								<li>
+									PHP: Hypertext Preprocessor: .php,
+								</li>
+								<li>
+
+								</li>
+							</ul>
+						</li>
+						<li class="fragment">
+							Namespaces
+							<ul>
+								<li>
+									Drupal code base is pretty big
+								</li>
+								<li>
+									Namespacing helps you avoid repeating the name for a function or class that has been declared before
+								</li>
+								<li>
+									Eliminates need for super long class names, points to where in the code you can find the source of the functions
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Namespaces</h3>
+				</section>
+
+				<section>
 					<h3>The Module Skeleton</h3>
 					<img src="images/skeleton.gif" style="width: 400px;"/>
 				</section>
@@ -116,7 +154,7 @@
 					<h3>capable.info.yml</h3>
 					<ul>
 						<li>The info.yml file lives in your root folder and tells Drupal about your module</li>
-						<li>The info.yml file information is found on the Drupal admin pages (/admin/modules)</li>
+						<li>The info.yml file information can be found on the Drupal admin pages (/admin/modules)</li>
 					</ul>
 					<img src="images/capable-module-info-file.png" />
 				</section>
@@ -131,31 +169,65 @@
 					<div class="left">
 						<img src="images/capable-module-info-file-2.png" />
 					</div>
-					<div class="right">
+					<div class="right font-16">
 						<ul>
-							<li>
-								depedencies:
+							<li class="fragment">
+								depedencies: <br />
+								<ul>
+									<li>List the other module(s) that your module depends on to work.</li>
+									<li>Namespacing: {project}:{module}</li>
+									<li>{project} is the name as it appears in the Drupal.org url (https://www.drupal.org/project/token)</li>
+									<li>{module} is the module machine name (token)</li>
+									<li>Can also include version restrictions: token:token (8.x-1.3)</li>
+								</ul>
 							</li>
-							<li>
+							<li class="fragment">
 								test_dependencies:
+								<ul>
+									<li>List the module(s) you need to run automated tests</li>
+									<li>Same namespacing as dependecies: {project}:{module} </li>
+								</ul>
 							</li>
-							<li>
+							<li class="fragment">
 								configure:
+								<ul>
+									<li>Specify the route to a configuration form</li>
+									<li>This will show on the /admin/modules pages when you expand [this needs different words or an image]</li>
+								</ul>
 							</li>
-							<li>
+							<li class="fragment">
 								php:
+								<ul>
+									<li>Defines the <strong>minimum</strong> PHP verison that your module requires</li>
+									<li>Can't enable the module if your PHP version is older</li>
+								</ul>
 							</li>
-							<li>
-								hidden
+							<li class="fragment">
+								hidden:
+								<ul>
+									<li>hidden: true, will hide your your module on the /admin/modules page</li>
+									<li>Why would you hide your module? Perhaps it only implements tests and you don't want it disabled</li>
+								</ul>
 							</li>
 						</ul>
 					</div>
 				</section>
 
 				<section>
-					<h3>Namespaces</h3>
+					<h2>All The Sources</h2>
+					<img src="images/read-all-the-things.png" />
 				</section>
 
+				<section>
+					Namespaces
+					<ul>
+						<li><a href="https://www.sitepoint.com/php-53-namespaces-basics/">https://www.sitepoint.com/php-53-namespaces-basics/</a></li>
+						<li><a href="https://www.drupal.org/docs/develop/coding-standards/namespaces">https://www.drupal.org/docs/develop/coding-standards/namespaces</a></li>
+						<li>
+							<a href="https://en.wikipedia.org/wiki/Namespace">https://en.wikipedia.org/wiki/Namespace</a>
+						</li>
+					</ul>
+				</section>
 				<section>
 					<h3>Questions?</h3>
 					<img src="images/questions.gif" style="width: 500px;">
