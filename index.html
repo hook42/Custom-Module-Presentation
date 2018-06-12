@@ -81,12 +81,22 @@
 				</section>
 
 				<section>
-					<h3>Naming Your Module</h3>
-					http://www.php.net/manual/en/functions.user-defined.php
+					<h3>Namespaces</h3>
 				</section>
 
 				<section>
-					<h3>Namespaces</h3>
+					<h3>MVC</h3>
+				</section>
+
+				<section>
+					<h3>Naming Your Module</h3>
+					<ul>
+						<li>Start with a letter</li>
+						<li>Contain only lower-case letters and underscores</li>
+						<li>No spaces</li>
+						<li>Unique name</li>
+						<li>Does not contain any reserved words: src, lib, vendor, assets, css, files, images, js, misc, templates, includes, fixtures, Drupal</li>
+					</ul>
 				</section>
 
 				<section>
@@ -97,7 +107,7 @@
 				<section>
 					<h3>Capable Module</h3>
 					<div class="module-files">
-<pre>
+<pre class="font-10">
 	modules
 		/contrib
 		/custom
@@ -151,31 +161,9 @@
 					<ul>
 						<li>The info.yml file lives in your root folder and tells Drupal about your module</li>
 						<li>The info.yml file information can be found on the Drupal admin pages (/admin/modules)</li>
+						<li>Technically, this the only file you need for your module (although your module won't do much of anything if this is your only module file)</li>
 					</ul>
 					<img src="images/capable-module-info-file.png" />
-				</section>
-
-				<section>
-					<h3>composer.json</h3>
-				</section>
-
-				<section>
-					<h3>CapableController.php</h3>
-					<ul>
-						<li>
-							Controllers ---- do what?
-						</li>
-						<li>
-							Lives here /src/Controller
-						</li>
-						<li>
-							 mark fo the typical MVC application ---> define this
-						</li>
-					</ul>
-				</section>
-
-				<section>
-					<h3>capable.routing.yml</h3>
 				</section>
 
 				<section>
@@ -236,9 +224,37 @@
 					<h3>capable.module</h3>
 					apparently this is a optional file? <br />
 					http://befused.com/drupal/first-drupal8-module
-					used for hook
-					---> now we get to define hooks FINALLY!
 				</section>
+
+				<section>
+					<h3>Introduction to Hooks</h3>
+				</section>
+
+				<section>
+					<h3>composer.json</h3>
+				</section>
+
+				<section>
+					<h3>CapableController.php</h3>
+					<ul>
+						<li>
+							Controllers ---- do what?
+						</li>
+						<li>
+							Lives here /src/Controller
+						</li>
+						<li>
+							 mark fo the typical MVC application ---> define this
+						</li>
+					</ul>
+					http://extrimity.in/content/developing-first-drupal-8-module --- control the flow of the module
+				</section>
+
+				<section>
+					<h3>capable.routing.yml</h3>
+					specify the controller and the routing information here
+				</section>
+
 
 				<section>
 					<h3>SRC</h3>
@@ -261,6 +277,12 @@
 						<li><a href="https://www.drupal.org/docs/develop/coding-standards/namespaces">https://www.drupal.org/docs/develop/coding-standards/namespaces</a></li>
 						<li>
 							<a href="https://en.wikipedia.org/wiki/Namespace">https://en.wikipedia.org/wiki/Namespace</a>
+						</li>
+					</ul>
+					General
+					<ul>
+						<li>
+							https://www.drupal.org/docs/8/creating-custom-modules/a-practical-guide-to-building-basic-drupal-8-modules
 						</li>
 					</ul>
 				</section>
