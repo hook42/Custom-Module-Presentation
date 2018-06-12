@@ -56,37 +56,50 @@
 				</section>
 
 				<section>
-					<h3>Vocabulary Time</h3>
-					<ul class="font-16">
+					<h3>We can't just start with the module files. </h3>
+					<span class="fragment">
+						<p>Nothing is ever that easy.</p>
+						<img src="images/crying.gif" />
+					</span>
+				</section>
+
+				<section>
+					<h3>Concept #1: PSR-4</h3>
+					<ul class="font-25">
 						<li class="fragment">
-							Types of files:
-							<ul>
-								<li>YAML (YAML Ain't Markup Language): .yml, .yaml</li>
-								<li>PHP: Hypertext Preprocessor: .php </li>
-								<li>Markdown: .md</li>
-								<li>Javascript Object Notation (JSON): .json</li>
-								<li> Module: .module</li>
-								<li>inc: Included file, is not a stand alone file [this needs more clarification]</li>
-							</ul>
+							PSR stands for PHP Standard Recommendation
 						</li>
 						<li class="fragment">
-							Namespaces
-							<ul>
-								<li>Drupal code base is pretty big</li>
-								<li>Namespacing helps you avoid repeating the name for a function or class that has been declared before</li>
-								<li>Eliminates need for super long class names, points to where in the code you can find the source of the functions</li>
-							</ul>
+							PSR is a PHP specification that is published by the <a href="https://www.php-fig.org/">PHP Framework Interop Group (php-fig)</a> who's focus is to move "PHP foward through collaboration and standards"
+						</li>
+						<li class="fragment">
+							Drupal 8 implements the PSR-4 standard for namespaces and autoloading
 						</li>
 					</ul>
+					<img class="fragment" src="images/confused.gif" />
 				</section>
 
 				<section>
 					<h3>Namespaces</h3>
+					<ul>
+						<li>Drupal code base is pretty big</li>
+						<li>Namespacing helps you avoid repeating the name for a function or class that has been declared before</li>
+						<li>Eliminates need for super long class names, points to where in the code you can find the source of the functions</li>
+					</ul>
 				</section>
 
 				<section>
-					<h3>MVC</h3>
+					<h3>Types of files:</h3>
+					<ul>
+						<li>YAML (YAML Ain't Markup Language): .yml, .yaml</li>
+						<li>PHP: Hypertext Preprocessor: .php </li>
+						<li>Markdown: .md</li>
+						<li>Javascript Object Notation (JSON): .json</li>
+						<li> Module: .module</li>
+						<li>inc: Included file, is not a stand alone file [this needs more clarification]</li>
+					</ul>
 				</section>
+
 
 				<section>
 					<h3>Naming Your Module</h3>
