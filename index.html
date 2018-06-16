@@ -56,6 +56,10 @@
 				</section>
 
 				<section>
+					<h3>Quick note: sometimes words are mentioned before they are defined. Please have patience.</h3>
+				</section>
+
+				<section>
 					<h3>We can't just start with the list of files</h3>
 					<span class="fragment">
 						<p>Nothing is ever that easy.</p>
@@ -88,7 +92,7 @@
 					<ul>
 						<li class="fragment">"Namespaces are commonly structured as hierarchies to allow reuse of names in different contexts." - <a href="https://en.wikipedia.org/wiki/Namespace">Wikipedia</a></li>
 						<li class="fragment">Namespacing helps you avoid name collisions if you repeat the name for a function/class that was declared before</li>
-						<li class="fragment">Eliminates need for super long class names, points to where in the code you can find the source of the functions</li>
+						<li class="fragment">Eliminates need for super long class names, points to where in the code you can find the function source</li>
 					</ul>
 				</section>
 
@@ -98,9 +102,36 @@
 				</section>
 
 				<section>
+					<h3> Symfony</h3>
+					<ul>
+						<li>Symfony is a PHP framework and a set of reuasable PHP components and libraries</li>
+						<li>Components are standalone PHP libraries that generate specific features</li>
+						<li>Symfony is defined as a MVC (Model, View, and Controller) framework
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>The HttpKernel Component</h3>
+					<ul>
+						<li>
+							This componenet converts a HTTP Request into a HTTP Respose by using a EventDispatcher component
+						</li>
+					</ul>
+				</section>
+
+				<section>
 					<h3>Why are you telling me this?</h3>
 					<img src="images/why.gif" />
-					<p class="fragment">Autoloading and namespacing play an important role in how and why we structure files in a module</p>
+					<ul>
+						<li>
+							Autoloading and namespacing play an important role in how and why we structure files and code in a module
+						</li>
+						<li>
+							Some Symfony componenets are incorporated into Drupal 8, including the HTTPKernel, Routing, Yaml
+						</li>
+					</ul>
+
 				</section>
 
 				<section>
@@ -305,29 +336,46 @@ modules
 				</section>
 
 				<section>
-					Namespaces
-					<ul>
-						<li><a href="https://www.sitepoint.com/php-53-namespaces-basics/">https://www.sitepoint.com/php-53-namespaces-basics/</a></li>
-						<li><a href="https://www.drupal.org/docs/develop/coding-standards/namespaces">https://www.drupal.org/docs/develop/coding-standards/namespaces</a></li>
-						<li>
-							<a href="https://en.wikipedia.org/wiki/Namespace">https://en.wikipedia.org/wiki/Namespace</a>
-						</li>
-						<li>
-							<a href="https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader-examples.md">https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader-examples.md</a>
-						</li>
-					</ul>
-					General
-					<ul>
-						<li>
-							https://www.drupal.org/docs/8/creating-custom-modules/a-practical-guide-to-building-basic-drupal-8-modules
-						</li>
-					</ul>
-					Example Modules:
-					<ul>
-						<li>
-						 	http://cgit.drupalcode.org/examples/tree/?h=8.x-1.x
-						</li>
-					</ul>
+					<div class="font-10">
+						<h3>Namespaces</h3>
+						<ul>
+							<li><a href="https://www.sitepoint.com/php-53-namespaces-basics/">https://www.sitepoint.com/php-53-namespaces-basics/</a></li>
+							<li><a href="https://www.drupal.org/docs/develop/coding-standards/namespaces">https://www.drupal.org/docs/develop/coding-standards/namespaces</a></li>
+							<li>
+								<a href="https://en.wikipedia.org/wiki/Namespace">https://en.wikipedia.org/wiki/Namespace</a>
+							</li>
+							<li>
+								<a href="https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader-examples.md">https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader-examples.md</a>
+							</li>
+						</ul>
+					</div>
+					<div class="font-10">
+						<h3>General</h3>
+						<ul>
+							<li>
+								https://www.drupal.org/docs/8/creating-custom-modules/a-practical-guide-to-building-basic-drupal-8-modules
+							</li>
+						</ul>
+					</div>
+					<div class="font-10">
+						<h3>Symfony</h3>
+						<ul>
+							<li>
+								<a href="https://symfony.com/doc/current/controller.html">https://symfony.com/doc/current/controller.html</a>
+							</li>
+							<li>
+								<a href="https://symfony.com/doc/current/components/http_kernel.html">https://symfony.com/doc/current/components/http_kernel.html</a>
+							</li>
+						</ul>
+					</div>
+					<div class="font-10">
+						<h3>Example Modules:</h3>
+						<ul>
+							<li>
+								http://cgit.drupalcode.org/examples/tree/?h=8.x-1.x
+							</li>
+						</ul>
+					</div>
 				</section>
 				<section>
 					<h3>Questions?</h3>
