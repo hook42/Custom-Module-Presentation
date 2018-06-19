@@ -29,7 +29,7 @@
 					<h1 class="text__dark text__bold">
 						Drupal 8 Custom Module Architecture </h1>
 						<h3>What’s Going On? </h3>
-					<p class="fragment">Lindsay Gaudinier at Hook 42</p>
+					<p>Lindsay Gaudinier at Hook 42</p>
 				</section>
 
 				<section>
@@ -105,30 +105,65 @@
 					<h3> Symfony</h3>
 					<ul>
 						<li>Symfony is a PHP framework and a set of reuasable PHP components and libraries</li>
+						<li>Defined as a MVC (Model, View, and Controller) framework</li>
 						<li>Components are standalone PHP libraries that generate specific features</li>
-						<li>Symfony is defined as a MVC (Model, View, and Controller) framework
-						</li>
 					</ul>
 				</section>
 
 				<section>
-					<h3>The HttpKernel Component</h3>
-					<ul>
+					<h3>Some Symfony Components</h3>
+					<ul class="font-20">
 						<li>
-							This componenet converts a HTTP Request into a HTTP Respose by using a EventDispatcher component
+							<strong>ClassLoader:</strong> provides tools to autoload classes and cache their locations for performance
+						</li>
+						<li>
+							<strong>Console:</strong> helps you create command line interfaces
+						</li>
+						<li>
+							<strong>CssSelector:</strong> converts CSS selectors to XPath expressions (ummmm wtf is this?)
+						</li>
+						<li>
+							<strong>DependencyInjection:</strong> lets you standardize and centralize the way objects are constructed
+						</li>
+						<li>
+							<strong>EventDispatcher:</strong> lets components communicate with each other
+						</li>
+						<li>
+							<strong>HttpFoundation:</strong> defined an object-oriented layer for the HTTP specification
+						</li>
+						<li>
+							<strong>HttpKernel:</strong> converts a HTTP Request into a HTTP Respose by using a EventDispatcher component
+						</li>
+						<li>
+							<strong>Process:</strong> executes command sin subprocesses (this needs some love) - https://symfony.com/doc/current/components/process.html
+						</li>
+						<li>
+							<strong>Routing:</strong> maps an HTTP request to a set of configurable variables
+						</li>
+						<li>
+							<strong>Serializer:</strong> turn objects into specific formats (YAML) and specific formats into objects
+						</li>
+						<li>
+							<strong>Translation:</strong> provides tools for internationalization
+						</li>
+						<li>
+							<strong>Validator:</strong> validates following <a href="https://jcp.org/en/jsr/detail?id=303">JSR 303: Bean Validation</a>
+						</li>
+						<li><strong>Yaml:</strong> parses YAML strings to conver them to PHP arrays and also converts PHP arrays to YAML string
 						</li>
 					</ul>
 				</section>
+
 
 				<section>
 					<h3>Why are you telling me this?</h3>
 					<img src="images/why.gif" />
-					<ul>
-						<li>
+					<ul class="font-25">
+						<li class="fragment">
 							Autoloading and namespacing play an important role in how and why we structure files and code in a module
 						</li>
-						<li>
-							Some Symfony componenets are incorporated into Drupal 8, including the HTTPKernel, Routing, Yaml
+						<li class="fragment">
+							While Drupal 8 does NOT use the Symfony framework, D8 uses some Symfony components: ClassLoader, DependencyInjection, EventDispatcher, HTTPFoundation, HTTPKernel, Routing, Serializer, Validator, YAML
 						</li>
 					</ul>
 
@@ -283,7 +318,7 @@ modules
 				<section>
 					<h3>The Controller File</h3>
 					<ul class="font-25">
-						<li>Following PSR-4, the controller file will live inside a folder called src, and then in a folder called Controller [why is this capitalized and necessary???]</li>
+						<li>Following PSR-4, the controller file will live inside a folder called src, and then in a folder called Controller</li>
 						<li>src stands for source</li>
 						<img src="images/source-folder.png" />
 						<li>Need to declare a namespace at the top.</li>
@@ -365,6 +400,9 @@ modules
 							</li>
 							<li>
 								<a href="https://symfony.com/doc/current/components/http_kernel.html">https://symfony.com/doc/current/components/http_kernel.html</a>
+							</li>
+							<li>
+								<a href="https://symfony.com/doc/current/components/yaml.html">https://symfony.com/doc/current/components/yaml.html</a>
 							</li>
 						</ul>
 					</div>
