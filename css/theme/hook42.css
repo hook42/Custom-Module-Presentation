@@ -376,3 +376,11 @@ body {
 .reveal .right {
   float: right;
   width: 49%; }
+
+.reveal .left-40 {
+  width: 40%;
+  float: left; }
+
+.reveal .right-60 {
+  width: 55%;
+  float: right; }

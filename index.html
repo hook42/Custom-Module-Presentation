@@ -113,44 +113,19 @@
 				<section>
 					<h3>Some Symfony Components</h3>
 					<ul class="font-20">
-						<li>
-							<strong>ClassLoader:</strong> provides tools to autoload classes and cache their locations for performance
-						</li>
-						<li>
-							<strong>Console:</strong> helps you create command line interfaces
-						</li>
-						<li>
-							<strong>CssSelector:</strong> converts CSS selectors to XPath expressions (ummmm wtf is this?)
-						</li>
-						<li>
-							<strong>DependencyInjection:</strong> lets you standardize and centralize the way objects are constructed
-						</li>
-						<li>
-							<strong>EventDispatcher:</strong> lets components communicate with each other
-						</li>
-						<li>
-							<strong>HttpFoundation:</strong> defined an object-oriented layer for the HTTP specification
-						</li>
-						<li>
-							<strong>HttpKernel:</strong> converts a HTTP Request into a HTTP Respose by using a EventDispatcher component
-						</li>
-						<li>
-							<strong>Process:</strong> executes command sin subprocesses (this needs some love) - https://symfony.com/doc/current/components/process.html
-						</li>
-						<li>
-							<strong>Routing:</strong> maps an HTTP request to a set of configurable variables
-						</li>
-						<li>
-							<strong>Serializer:</strong> turn objects into specific formats (YAML) and specific formats into objects
-						</li>
-						<li>
-							<strong>Translation:</strong> provides tools for internationalization
-						</li>
-						<li>
-							<strong>Validator:</strong> validates following <a href="https://jcp.org/en/jsr/detail?id=303">JSR 303: Bean Validation</a>
-						</li>
-						<li><strong>Yaml:</strong> parses YAML strings to conver them to PHP arrays and also converts PHP arrays to YAML string
-						</li>
+						<li><strong>ClassLoader:</strong> provides tools to autoload classes and cache their locations for performance</li>
+						<li><strong>Console:</strong> helps you create command line interfaces</li>
+						<li><strong>CssSelector:</strong> converts CSS selectors to XPath (XML Path language) expression</li>
+						<li><strong>DependencyInjection:</strong> lets you standardize and centralize the way objects are constructed</li>
+						<li><strong>EventDispatcher:</strong> lets components communicate with each other</li>
+						<li><strong>HttpFoundation:</strong> defined an object-oriented layer for the HTTP specification</li>
+						<li><strong>HttpKernel:</strong> converts a HTTP Request into a HTTP Respose by using a EventDispatcher component</li>
+						<li><strong>Process:</strong> executes commands in subprocesses, creates APi for shell executions https://symfony.com/doc/current/components/process.html</li>
+						<li><strong>Routing:</strong> maps an HTTP request to a set of configurable variables</li>
+						<li><strong>Serializer:</strong> turn objects into specific formats (YAML) and specific formats into objects</li>
+						<li><strong>Translation:</strong> provides tools for internationalization</li>
+						<li><strong>Validator:</strong> validates following <a href="https://jcp.org/en/jsr/detail?id=303">JSR 303: Bean Validation</a></li>
+						<li><strong>Yaml:</strong> parses YAML strings to conver them to PHP arrays, and vice versa</li>
 					</ul>
 				</section>
 
@@ -172,23 +147,25 @@
 				<section>
 					<h3>Types of files:</h3>
 					<ul>
-						<li>YAML (YAML Ain't Markup Language): .yml, .yaml</li>
-						<li>PHP: Hypertext Preprocessor: .php </li>
-						<li>Markdown: .md</li>
-						<li>Javascript Object Notation (JSON): .json</li>
-						<li> Module: .module</li>
-						<li>inc: Included file, is not a stand alone file [this needs more clarification]</li>
+						<li class="fragment">YAML (YAML Ain't Markup Language): .yml, .yaml</li>
+						<li class="fragment">PHP: Hypertext Preprocessor: .php </li>
+						<li class="fragment">Markdown: .md</li>
+						<li class="fragment">Javascript Object Notation (JSON): .json</li>
+						<li class="fragment"> Module: .module</li>
+						<li class="fragment">inc: Included file, is not a stand alone file [this needs more clarification]</li>
+						<li class="fragment"> Javascript: .js	</li>
+						<li class="fragment"> CSS (Cascading Style Sheets): .css</li>
 					</ul>
 				</section>
 
 				<section>
-					<h3>Naming Your Module</h3>
+					<h3>Naming the module</h3>
 					<ul>
-						<li>Start with a letter</li>
-						<li>Contain only lower-case letters and underscores</li>
-						<li>No spaces</li>
-						<li>Unique name</li>
-						<li>Does not contain any reserved words: src, lib, vendor, assets, css, files, images, js, misc, templates, includes, fixtures, Drupal</li>
+						<li class="fragment">Start with a letter</li>
+						<li class="fragment">Contain only lower-case letters and underscores</li>
+						<li class="fragment">No spaces</li>
+						<li class="fragment">Unique name</li>
+						<li class="fragment">Does not contain any reserved words: src, lib, vendor, assets, css, files, images, js, misc, templates, includes, fixtures, Drupal</li>
 					</ul>
 				</section>
 
@@ -251,17 +228,17 @@ modules
 					<ul>
 						<li class="fragment">The info.yml file lives in your root folder and tells Drupal about your module</li>
 						<li class="fragment">The info.yml file information can be found on the Drupal admin pages (/admin/modules)</li>
-						<li class="fragment">Technically, this the only file you need for your module (although the module won't do anything)</li>
+						<li class="fragment">Technically, the only required file in your module (although the module won't do anything)</li>
 					</ul>
 					<img class="fragment" src="images/capable-module-info-file.png" />
 				</section>
 
 				<section>
 					<h3>What's going on?</h3>
-					<div class="left" style="width: 40%;">
+					<div class="left-40">
 						<img src="images/capable-module-info-file.png"/>
 					</div>
-					<div class="right" style="width: 59%;">
+					<div class="right-60">
 						<img src="images/capable-module-info-screenshot.png"/>
 					</div>
 				</section>
@@ -318,33 +295,56 @@ modules
 				<section>
 					<h3>The Controller File</h3>
 					<ul class="font-25">
-						<li>Following PSR-4, the controller file will live inside a folder called src, and then in a folder called Controller</li>
-						<li>src stands for source</li>
-						<img src="images/source-folder.png" />
-						<li>Need to declare a namespace at the top.</li>
-						<li>Namespace format: Drupal\[module name]\Controller;</li>
+						<li class="fragment">Following PSR-4, the controller file will live inside a folder called src, and then in a folder called Controller</li>
+						<li class="fragment">src stands for source</li>
+						<img src="images/source-folder.png" class="fragment" />
+						<li class="fragment">Need to declare a namespace at the top.</li>
+						<li class="fragment">Namespace format: Drupal\[module name]\Controller;</li>
+						<li class="fragment">The controller file will work with the router file</li>
 					</ul>
 				</section>
 
 				<section>
 					<h3>CapableController.php</h3>
-					<img src="images/capable-controller-file.png" />
+					<img src="images/capable-controller-file.png" class="left-40"/>
+					<ul class="right-60 font-20">
+						<li class="fragment">
+							<strong>namespace Drupal\capable\Controller:</strong> declaring the namespace for the capable Controller class <br />
+							- this must be done before any other code (except a declare statement)
+						</li>
+						<li class="fragment">
+							<strong>use Drupal\Core\Controller\ControllerBase: </strong> importing (aliasing) the Drupal core ControllerBase, which is being extended by CapableController class. <br />
+							- Do not include a leading \ <br />
+							- Only specify one class per use statement. <br />
+							- No clear rule to order for multiple use statements. <br />
+							- Final use statement should habe a blank line underneath it.
+						</li>
+						<li class="fragment">
+							<strong>class CapableController extends ControllerBase:</strong> creation of CapableController class that extends Drupal's core ControllerBase class
+						</li>
+						<li class="fragment">
+							<strong>public function content():</strong> take note of the name of the function, this will come back in the routing file
+						</li>
+					</ul>
 				</section>
 
 				<section>
-					<h3>The Router File</h3>
+					<h3>The Routing File</h3>
+					<ul class="font-25">
+						<li class="fragment">A route is a path where Drupal returns some sort of content</li>
+						<li class="fragment">The routing system is responsible for matching paths to controllers.</li>
+						<li class="fragment">Parameters are used for URLs that may contain dynamic values. <br />
+							/hello/{node} would work for both /hello/123 and /hello/98 </li>
+						<img src="images/capable-module-routing-file.png" class="fragment" />
+					</ul>
 				</section>
 
 				<section>
 					<h3>capable.routing.yml</h3>
-					<ul>
-						<li>
-							Routing lets you expose content or functionality in your own URIs on a site - https://www.drupal.org/docs/8/api/routing-system/introductory-drupal-8-routes-and-controllers-example
-						</li>
-						<li>
-							also tells the controller when it should be used
-						</li>
-					</ul>
+				</section>
+
+				<section>
+					<h3>capable.routing.yml complete example</h3>
 				</section>
 
 				<section>
