@@ -333,8 +333,6 @@ modules
 					<ul class="font-25">
 						<li class="fragment">A route is a path where Drupal returns some sort of content</li>
 						<li class="fragment">The routing system is responsible for matching paths to controllers.</li>
-						<li class="fragment">Parameters are used for URLs that may contain dynamic values. <br />
-							/hello/{node} would work for both /hello/123 and /hello/98 </li>
 						<img src="images/capable-module-routing-file.png" class="fragment" />
 					</ul>
 				</section>
@@ -349,6 +347,36 @@ modules
 					<img src="images/routing-file-simple-outlined.png" style="height: 130px;"/>
 					<img src="images/capable-controller-file-outlined.png" style="height: 225px;"/>
 					<img src="images/routing-file-screenshot.png" style="height: 275px;" />
+				</section>
+
+				<section>
+					<h3>Routing + Controller Working Together</h3>
+					<img src="images/d8-routing.png" />
+				</section>
+
+				<section>
+					<h3>Parameters in Routes</h3>
+					<ul class='font-20'>
+						<li class="fragment">Parameters are used for URLs that may contain dynamic values. <br />
+							/parameters/{partial} would work for both /parameters/hello and /parameters/goodbye </li>
+						<li class="fragment"> The {partial} element in the url is called a slug, and is is avaible as a $partial in the controller method</li>
+						<li class="fragment">You can even have multiple parameters on a single route: /{product}/{color}</li>
+						<div class="fragment">
+							<img src="images/router-parameters.png" class="left"/>
+							<img src="images/controller-parameters.png" class="right"/>
+						</div>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Parameters in Routes</h3>
+					<img src="images/parameters-hello.png" style="width: 600px;"/>
+					<img src="images/parameters-goodbye.png" style="width: 600px;" />
+				</section>
+
+				<section>
+					<h3>Dynamic Routes</h3>
+					https://www.drupal.org/node/2122201
 				</section>
 
 				<section>
@@ -449,6 +477,18 @@ modules
 							</li>
 							<li>
 								<a href="https://symfony.com/doc/current/components/yaml.html">https://symfony.com/doc/current/components/yaml.html</a>
+							</li>
+						</ul>
+					</div>
+					<div class="font-10">
+						<h3>Routing</h3>
+						<ul>
+							<li>
+								<a href="https://www.drupal.org/node/2116767">https://www.drupal.org/node/2116767</a>
+							</li>
+							<li>
+								<a href="https://www.drupal.org/docs/8/api/routing-system/structure-of-routes">https://www.drupal.org/docs/8/api/routing-system/structure-of-routes</a>
+
 							</li>
 						</ul>
 					</div>
