@@ -60,6 +60,10 @@
 				</section>
 
 				<section>
+					<h3>Do you need a custom module</h3>
+				</section>
+
+				<section>
 					<h3>We can't just start with the list of files</h3>
 					<span class="fragment">
 						<p>Nothing is ever that easy.</p>
@@ -128,7 +132,6 @@
 						<li><strong>Yaml:</strong> parses YAML strings to conver them to PHP arrays, and vice versa</li>
 					</ul>
 				</section>
-
 
 				<section>
 					<h3>Why are you telling me this?</h3>
@@ -481,12 +484,55 @@ modules
 
 				<section>
 					<h3>capable.module</h3>
-					apparently this is a optional file? <br />
-					http://befused.com/drupal/first-drupal8-module
+					<ul>
+						<li class="fragment">
+							The capable.module file is optional
+						</li>
+						<li class="fragment">
+							The .module file is used for implementing hooks
+						</li>
+					</ul>
+					<img src="images/hooks.gif"  class="fragment"/>
 				</section>
 
 				<section>
 					<h3>Introduction to Hooks</h3>
+					<ul class="font-20">
+						<li class="fragment">
+							Hooking: range of techniques that lets you change the behavior of applications by intercepting events passed between software components.
+						</li>
+						<li class="fragment">
+							Hook: the code that handles this interception
+						</li>
+						<li class="fragment">
+							Hooks in Drupal let modules interact with other modules or Drupal core
+						</li>
+						<li class="fragment">
+							Hooks can be thought of event listeners that fire off when a certain event triggers them, and can be used at various code execution point
+						</li>
+						<li class="fragment">
+							In Drupal 8, some hooks have remained the same, some have been removed, others have been modified, and some have been added. <a href="https://api.drupal.org/api/drupal/core%21core.api.php/group/hooks/8.5.x">For the entire list of core hooks, click here. </a>
+						</li>
+						<li class="fragment">
+							To implement a hook, replace the hook name of the function with the name of your module:
+							<ul>
+								<li>
+									<a href="https://api.drupal.org/api/drupal/core%21modules%21help%21help.api.php/function/hook_help/8.2.x"> hook_help()</a> → capable_help()
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>capable.module</h3>
+					<img src="images/capable-module-module-file.png" style="height: 200px;"/>
+					<img src="images/capable-module-module-file-code.png" style="height: 300px;"/>
+					<img src="images/capable-module-module-file-screenshot.png" style="height: 200px;" />
+				</section>
+
+				<section>
+					DependencyInjection
 				</section>
 
 				<section>
@@ -594,6 +640,20 @@ modules
 						<ul>
 							<li>
 								http://cgit.drupalcode.org/examples/tree/?h=8.x-1.x
+							</li>
+						</ul>
+					</div>
+					<div class="font-10">
+						<h3>Hooks</h3>
+						<ul>
+							<li>
+								 <a href="https://en.wikipedia.org/wiki/Hooking">https://en.wikipedia.org/wiki/Hooking</a>
+							</li>
+							<li>
+								<a href="https://www.drupal.org/docs/8/creating-custom-modules/understanding-hooks">https://www.drupal.org/docs/8/creating-custom-modules/understanding-hooks</a>
+							</li>
+							<li>
+								<a href="https://x-team.com/blog/drupal-8-hooks/">https://x-team.com/blog/drupal-8-hooks/</a>
 							</li>
 						</ul>
 					</div>
