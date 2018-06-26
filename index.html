@@ -539,7 +539,62 @@ modules
 
 				<section>
 					<h3>Forms</h3>
-					https://www.drupal.org/docs/8/api/form-api/introduction-to-form-api
+					<ul class="font-25">
+						<li>
+							<a href="https://www.drupal.org/docs/8/api/form-api/introduction-to-form-api">Introduction to Form API</a>
+						</li>
+						<li>
+							Need to idenfity the type of form you need
+						</li>
+						<ul>
+							<li>
+								General form: extend <a href="https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Form%21FormBase.php/class/FormBase/8">Form Base</a>
+							</li>
+							<li>
+								A configuration form that lets administrators update a module settings: extend <a href="https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Form%21ConfigFormBase.php/class/ConfigFormBase/8">ConfigFormBase</a>
+							</li>
+							<li>
+								A form for deleting content or configuation with a confirmation step: extend <a href="https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Form%21ConfirmFormBase.php/class/ConfirmFormBase/8">ConfirmFormBase</a>
+							</li>
+						</ul>
+						<li>
+							Required methods:
+								<ul>
+									<li>
+										getFormId()
+									</li>
+									<li>
+										buildForm()
+									</li>
+									<li>
+										validateForm()
+									</li>
+									<li>
+										submitForm()
+									</li>
+								</ul>
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>CapableForm.php</h3>
+					<div class="left">
+						<img src="images/capable-form-screenshot.png" />
+					</div>
+					<div class="right">
+						<img src="images/capable-form-routing-screenshot.png" />
+					</div>
+				</section>
+
+				<section>
+					<h3>CapableForm.php</h3>
+					<div class="left">
+						<img src="images/capable-form-php-file.png" />
+					</div>
+					<div class="right">
+						<img src="images/capable-form-screenshot-site.png" />
+					</div>
 				</section>
 
 				<section>
@@ -715,6 +770,23 @@ modules
 							</li>
 							<li>
 								<a href="https://books.google.com/books?id=pM7cDgAAQBAJ&pg=PA554&lpg=PA554&dq=drupal+8+dynamic+permissions&source=bl&ots=TXWp9eVH4h&sig=r-KIhVu4wZXGu2RxG5ilCMEedNI&hl=en&sa=X&ved=0ahUKEwixxKWI9_HbAhVvCTQIHfMxAcg4HhDoAQhTMAg#v=onepage&q=drupal%208%20dynamic%20permissions&f=false">Drupal 8: Enterprise Web Development</a>
+							</li>
+						</ul>
+					</div>
+					<div class="font-10">
+						<h3>Forms</h3>
+						<ul>
+							<li>
+								<a href="https://www.drupal.org/docs/8/api/form-api/introduction-to-form-api">https://www.drupal.org/docs/8/api/form-api/introduction-to-form-api</a>
+							</li>
+							<li>
+								<a href="https://valuebound.com/resources/blog/step-by-step-method-to-create-a-custom-form-in-drupal-8">https://valuebound.com/resources/blog/step-by-step-method-to-create-a-custom-form-in-drupal-8</a>
+							</li>
+							<li>
+								<a href="https://www.velir.com/blog/2016/01/04/technical-guide-drupal-8-forms">https://www.velir.com/blog/2016/01/04/technical-guide-drupal-8-forms</a>
+							</li>
+							<li>
+								<a href="http://cgit.drupalcode.org/examples/tree/form_api_example">http://cgit.drupalcode.org/examples/tree/form_api_example</a>
 							</li>
 						</ul>
 					</div>
