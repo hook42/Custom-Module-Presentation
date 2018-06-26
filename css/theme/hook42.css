@@ -384,3 +384,7 @@ body {
 .reveal .right-60 {
   width: 55%;
   float: right; }
+
+.reveal .no-margin {
+  margin-top: 0px;
+  margin-bottom: 0px; }
