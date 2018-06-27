@@ -540,13 +540,13 @@ modules
 				<section>
 					<h3>Forms</h3>
 					<ul class="font-25">
-						<li>
+						<li class="fragment">
 							<a href="https://www.drupal.org/docs/8/api/form-api/introduction-to-form-api">Introduction to Form API</a>
 						</li>
-						<li>
+						<li class="fragment">
 							Need to idenfity the type of form you need
 						</li>
-						<ul>
+						<ul class="fragment">
 							<li>
 								General form: extend <a href="https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Form%21FormBase.php/class/FormBase/8">Form Base</a>
 							</li>
@@ -557,7 +557,7 @@ modules
 								A form for deleting content or configuation with a confirmation step: extend <a href="https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Form%21ConfirmFormBase.php/class/ConfirmFormBase/8">ConfirmFormBase</a>
 							</li>
 						</ul>
-						<li>
+						<li class="fragment">
 							Required methods:
 								<ul>
 									<li>
@@ -580,10 +580,10 @@ modules
 				<section>
 					<h3>CapableForm.php</h3>
 					<div class="left">
-						<img src="images/capable-form-screenshot.png" />
+						<img src="images/capable-form-routing-screenshot.png" />
 					</div>
 					<div class="right">
-						<img src="images/capable-form-routing-screenshot.png" />
+						<img src="images/capable-form-screenshot.png" />
 					</div>
 				</section>
 
@@ -599,8 +599,12 @@ modules
 
 				<section>
 					<h3>Config</h3>
+					from here: https://www.drupal.org/docs/8/creating-custom-modules/basic-structure
 						settings.yml <br />
-						schema.yml
+						This file stores configuration defaults, which are assigned to the correct fields via the next file:
+						<br />
+						schema.yml <br />
+						The schema file is used even if you don't define a custom table for your module - here you can see defaults being assigned to the fields of a configuration form.
 				</section>
 
 				<section>
@@ -685,6 +689,20 @@ modules
 
 				<section>
 					<div class="font-10">
+						<h3>General</h3>
+						<ul>
+							<li>
+								<a href="https://www.drupal.org/docs/8/creating-custom-modules/a-practical-guide-to-building-basic-drupal-8-modules">https://www.drupal.org/docs/8/creating-custom-modules/a-practical-guide-to-building-basic-drupal-8-modules</a>
+							</li>
+							<li>
+								<a href="https://docs.acquia.com/en/stable/tutorials/fast-track-drupal-8-coding/define-custom-config-entity/">https://docs.acquia.com/en/stable/tutorials/fast-track-drupal-8-coding/define-custom-config-entity/</a>
+							</li>
+							<li>
+								<a href="https://www.drupal.org/docs/8/creating-custom-modules/a-practical-guide-to-building-basic-drupal-8-modules">https://www.drupal.org/docs/8/creating-custom-modules/a-practical-guide-to-building-basic-drupal-8-modules</a>
+							</li>
+						</ul>
+					</div>
+					<div class="font-10">
 						<h3>Namespaces</h3>
 						<ul>
 							<li><a href="https://www.sitepoint.com/php-53-namespaces-basics/">https://www.sitepoint.com/php-53-namespaces-basics/</a></li>
@@ -694,14 +712,6 @@ modules
 							</li>
 							<li>
 								<a href="https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader-examples.md">https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader-examples.md</a>
-							</li>
-						</ul>
-					</div>
-					<div class="font-10">
-						<h3>General</h3>
-						<ul>
-							<li>
-								https://www.drupal.org/docs/8/creating-custom-modules/a-practical-guide-to-building-basic-drupal-8-modules
 							</li>
 						</ul>
 					</div>
