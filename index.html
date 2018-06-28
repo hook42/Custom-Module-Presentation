@@ -254,7 +254,7 @@ modules
 					<div class="right font-16">
 						<ul>
 							<li class="fragment">
-								depedencies: <br />
+							<strong>depedencies:</strong>
 								<ul>
 									<li>List the other module(s) that your module depends on to work.</li>
 									<li>Namespacing: {project}:{module}</li>
@@ -264,28 +264,28 @@ modules
 								</ul>
 							</li>
 							<li class="fragment">
-								test_dependencies:
+								<strong>test_dependencies:</strong>
 								<ul>
 									<li>List the module(s) you need to run automated tests</li>
 									<li>Same namespacing as dependecies: {project}:{module} </li>
 								</ul>
 							</li>
 							<li class="fragment">
-								configure:
+								<strong>configure:</strong>
 								<ul>
 									<li>Specify the route to a configuration form</li>
 									<li>This will show on the /admin/modules pages when you expand [this needs different words or an image]</li>
 								</ul>
 							</li>
 							<li class="fragment">
-								php:
+								<strong>php:</strong>
 								<ul>
 									<li>Defines the <strong>minimum</strong> PHP verison that your module requires</li>
 									<li>Can't enable the module if your PHP version is older</li>
 								</ul>
 							</li>
 							<li class="fragment">
-								hidden:
+								<strong>hidden:</strong>
 								<ul>
 									<li>hidden: true, will hide your your module on the /admin/modules page</li>
 									<li>Why would you hide your module? Perhaps it only implements tests and you don't want it disabled</li>
@@ -455,7 +455,7 @@ modules
 
 				<section>
 					<h3>Module Menu Link</h3>
-					<p class="font-16">Menu link to the module in the Development section of the Administration >> Configuration (/admin/config)</p>
+					<p class="font-25">Menu link to the module in the Development section of the Administration >> Configuration (/admin/config)</p>
 					<img src="images/capable-module-links-file.png" />
 				</section>
 
@@ -701,6 +701,25 @@ modules
 
 				<section>
 					<h3>Load the Library</h3>
+					<ul class="font-25">
+						<li>
+							Can attach a library in several ways:
+							<ul>
+								<li class="fragment">
+									<a href="https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Render%21theme.api.php/function/hook_element_info_alter/8.3.x" >hook_element_info_alter()</a>: a module implements this hook to alter the element type defaults defined by a module
+								</li>
+								<li class="fragment">
+									<a href="https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Render%21theme.api.php/function/hook_page_attachments/8.3.x">hook_page_attachments()</a>: conditionally add assets to a page
+								</li>
+								<li class="fragment">
+									<a href="https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Render%21theme.api.php/function/hook_preprocess_HOOK/8.3.x">template_preprocess_HOOK()</a>: lets modules preprocess theme variables for a specific theme hook
+								</li>
+								<li class="fragment">
+									<a href="https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Template%21TwigExtension.php/function/TwigExtension%3A%3AattachLibrary/8.3.x">{{ attach_library(‘example/example’) }}</a>: attaches an asset to a the twig template
+								</li>
+							</ul>
+						</li>
+					</ul>
 				</section>
 
 				<section>
