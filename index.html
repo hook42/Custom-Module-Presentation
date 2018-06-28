@@ -542,6 +542,11 @@ modules
 					<ul class="font-25">
 						<li class="fragment">
 							<a href="https://www.drupal.org/docs/8/api/form-api/introduction-to-form-api">Introduction to Form API</a>
+							<ul>
+								<li>
+									API: application programming interface is a set of functions and tools for building software with clearly defined methods of communication
+								</li>
+							</ul>
 						</li>
 						<li class="fragment">
 							Need to idenfity the type of form you need
@@ -611,7 +616,7 @@ modules
 					<h3>Permissions</h3>
 					<ul class="font-25">
 						<li class="fragment">
-							Permissions are defined in a [module_name].permissions.yml instead of using hook_permission()
+							Permissions are defined in a [modulename].permissions.yml instead of using hook_permission()
 						<li class="fragment">
 							Static permissions: do not depend on system information
 						</li>
@@ -651,10 +656,6 @@ modules
 				</section>
 
 				<section>
-					<h3>Libraries</h3>
-				</section>
-
-				<section>
 					<h3>Services</h3>
 				</section>
 
@@ -663,7 +664,47 @@ modules
 				</section>
 
 				<section>
-					<h3>Module Themeing</h3>
+					<h3>Module Theming</h3>
+					why do theming in your module instead of your theme
+				</section>
+
+				<section>
+					<h3>Libraries</h3>
+					<ul class="font-25">
+						<li class="fragment">
+							A library is a "collection of implementations of behavior... that has a well-defined interface by which the behavior is invoked." - <a href="https://en.wikipedia.org/wiki/Library_(computing)">Wikipedia</a>
+						</li>
+						<li class="fragment">
+							Define one or more libraries (assets) in [modulename].libraries.yml
+						</li>
+						<li class="fragment">
+							Must explicitly tell Drupal the libraries you want it to load, including CSS and JS files
+						</li>
+						<li class="fragment">
+							Drupal 8 no longer loads jQuery on all pages on default, so you must tell Drupal that your library has a dependency on jQuery.
+						</li>
+						<li class="fragment">
+							Attach the library to a render array in a hook
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>capable.libraries.yml</h3>
+					<div class="left">
+						<img src="images/capable-libraries-file-location.png" />
+					</div>
+					<div class="right">
+						<img src="images/capable-libraries-file.png" />
+					</div>
+				</section>
+
+				<section>
+					<h3>Load the Library</h3>
+				</section>
+
+				<section>
+					<h3>External Library</h3>
 				</section>
 
 				<section>
@@ -672,6 +713,11 @@ modules
 
 				<section>
 					<h3>CSS</h3>
+					<ul>
+						<li>
+							how to set css weights in styling: https://www.drupal.org/docs/8/creating-custom-modules/adding-stylesheets-css-and-javascript-js-to-a-drupal-8-module
+						</li>
+					</ul>
 				</section>
 
 				<section>
@@ -691,14 +737,11 @@ modules
 					<div class="font-10">
 						<h3>General</h3>
 						<ul>
+							<li><a href="https://www.drupal.org/docs/8/creating-custom-modules/a-practical-guide-to-building-basic-drupal-8-modules">https://www.drupal.org/docs/8/creating-custom-modules/a-practical-guide-to-building-basic-drupal-8-modules</a></li>
+							<li><a href="https://docs.acquia.com/en/stable/tutorials/fast-track-drupal-8-coding/define-custom-config-entity/">https://docs.acquia.com/en/stable/tutorials/fast-track-drupal-8-coding/define-custom-config-entity/</a></li>
+							<li><a href="https://www.drupal.org/docs/8/creating-custom-modules/a-practical-guide-to-building-basic-drupal-8-modules">https://www.drupal.org/docs/8/creating-custom-modules/a-practical-guide-to-building-basic-drupal-8-modules</a></li>
 							<li>
-								<a href="https://www.drupal.org/docs/8/creating-custom-modules/a-practical-guide-to-building-basic-drupal-8-modules">https://www.drupal.org/docs/8/creating-custom-modules/a-practical-guide-to-building-basic-drupal-8-modules</a>
-							</li>
-							<li>
-								<a href="https://docs.acquia.com/en/stable/tutorials/fast-track-drupal-8-coding/define-custom-config-entity/">https://docs.acquia.com/en/stable/tutorials/fast-track-drupal-8-coding/define-custom-config-entity/</a>
-							</li>
-							<li>
-								<a href="https://www.drupal.org/docs/8/creating-custom-modules/a-practical-guide-to-building-basic-drupal-8-modules">https://www.drupal.org/docs/8/creating-custom-modules/a-practical-guide-to-building-basic-drupal-8-modules</a>
+								<a href="https://en.wikipedia.org/wiki/Application_programming_interface">https://en.wikipedia.org/wiki/Application_programming_interface</a>
 							</li>
 						</ul>
 					</div>
@@ -707,96 +750,64 @@ modules
 						<ul>
 							<li><a href="https://www.sitepoint.com/php-53-namespaces-basics/">https://www.sitepoint.com/php-53-namespaces-basics/</a></li>
 							<li><a href="https://www.drupal.org/docs/develop/coding-standards/namespaces">https://www.drupal.org/docs/develop/coding-standards/namespaces</a></li>
-							<li>
-								<a href="https://en.wikipedia.org/wiki/Namespace">https://en.wikipedia.org/wiki/Namespace</a>
-							</li>
-							<li>
-								<a href="https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader-examples.md">https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader-examples.md</a>
-							</li>
+							<li><a href="https://en.wikipedia.org/wiki/Namespace">https://en.wikipedia.org/wiki/Namespace</a></li>
+							<li><a href="https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader-examples.md">https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader-examples.md</a></li>
 						</ul>
 					</div>
 					<div class="font-10">
 						<h3>Symfony</h3>
 						<ul>
-							<li>
-								<a href="https://symfony.com/doc/current/controller.html">https://symfony.com/doc/current/controller.html</a>
-							</li>
-							<li>
-								<a href="https://symfony.com/doc/current/components/http_kernel.html">https://symfony.com/doc/current/components/http_kernel.html</a>
-							</li>
-							<li>
-								<a href="https://symfony.com/doc/current/components/yaml.html">https://symfony.com/doc/current/components/yaml.html</a>
-							</li>
+							<li><a href="https://symfony.com/doc/current/controller.html">https://symfony.com/doc/current/controller.html</a></li>
+							<li><a href="https://symfony.com/doc/current/components/http_kernel.html">https://symfony.com/doc/current/components/http_kernel.html</a></li>
+							<li><a href="https://symfony.com/doc/current/components/yaml.html">https://symfony.com/doc/current/components/yaml.html</a></li>
 						</ul>
 					</div>
 					<div class="font-10">
 						<h3>Routing</h3>
 						<ul>
-							<li>
-								<a href="https://www.drupal.org/node/2116767">https://www.drupal.org/node/2116767</a>
-							</li>
-							<li>
-								<a href="https://www.drupal.org/docs/8/api/routing-system/structure-of-routes">https://www.drupal.org/docs/8/api/routing-system/structure-of-routes</a>
-
-							</li>
+							<li><a href="https://www.drupal.org/node/2116767">https://www.drupal.org/node/2116767</a></li>
+							<li><a href="https://www.drupal.org/docs/8/api/routing-system/structure-of-routes">https://www.drupal.org/docs/8/api/routing-system/structure-of-routes</a></li>
 						</ul>
 					</div>
 					<div class="font-10">
 						<h3>Example Modules:</h3>
 						<ul>
-							<li>
-								http://cgit.drupalcode.org/examples/tree/?h=8.x-1.x
-							</li>
+							<li>http://cgit.drupalcode.org/examples/tree/?h=8.x-1.x</li>
 						</ul>
 					</div>
 					<div class="font-10">
 						<h3>Hooks</h3>
 						<ul>
-							<li>
-								 <a href="https://en.wikipedia.org/wiki/Hooking">https://en.wikipedia.org/wiki/Hooking</a>
-							</li>
-							<li>
-								<a href="https://www.drupal.org/docs/8/creating-custom-modules/understanding-hooks">https://www.drupal.org/docs/8/creating-custom-modules/understanding-hooks</a>
-							</li>
-							<li>
-								<a href="https://x-team.com/blog/drupal-8-hooks/">https://x-team.com/blog/drupal-8-hooks/</a>
+							<li><a href="https://en.wikipedia.org/wiki/Hooking">https://en.wikipedia.org/wiki/Hooking</a></li>
+							<li><a href="https://www.drupal.org/docs/8/creating-custom-modules/understanding-hooks">https://www.drupal.org/docs/8/creating-custom-modules/understanding-hooks</a></li>
+							<li><a href="https://x-team.com/blog/drupal-8-hooks/">https://x-team.com/blog/drupal-8-hooks/</a>
 							</li>
 						</ul>
 					</div>
 					<div class="font-10">
 						<h3>Permissions</h3>
 						<ul>
-							<li>
-								<a href="https://www.drupal8.ovh/en/tutoriels/66/create-a-custom-permission-drupal-8">https://www.drupal8.ovh/en/tutoriels/66/create-a-custom-permission-drupal-8</a>
-							</li>
-							<li>
-								<a href="https://www.aram.cz/article/custom-permissions-drupal-8">https://www.aram.cz/article/custom-permissions-drupal-8</a>
-							</li>
-							<li>
-								<a href="http://kevinquillen.com/drupal/2016/02/21/dynamic-permissions-in-drupal-8">http://kevinquillen.com/drupal/2016/02/21/dynamic-permissions-in-drupal-8</a>
-							</li>
-							<li>
-								<a href="https://books.google.com/books?id=JrW9CgAAQBAJ&pg=PA66&lpg=PA66&dq=drupal+8+dynamic+permissions&source=bl&ots=_hAJX2VabR&sig=Gb_-poAvmV8pylM1alul2WCsSRA&hl=en&sa=X&ved=0ahUKEwi_x6f89vHbAhXDh1QKHe9XAXE4FBDoAQhRMAY#v=onepage&q=drupal%208%20dynamic%20permissions&f=false">Programmer's Guide to Drupal: Principles, Practices, and Pitfalls</a>
-							</li>
-							<li>
-								<a href="https://books.google.com/books?id=pM7cDgAAQBAJ&pg=PA554&lpg=PA554&dq=drupal+8+dynamic+permissions&source=bl&ots=TXWp9eVH4h&sig=r-KIhVu4wZXGu2RxG5ilCMEedNI&hl=en&sa=X&ved=0ahUKEwixxKWI9_HbAhVvCTQIHfMxAcg4HhDoAQhTMAg#v=onepage&q=drupal%208%20dynamic%20permissions&f=false">Drupal 8: Enterprise Web Development</a>
-							</li>
+							<li><a href="https://www.drupal8.ovh/en/tutoriels/66/create-a-custom-permission-drupal-8">https://www.drupal8.ovh/en/tutoriels/66/create-a-custom-permission-drupal-8</a></li>
+							<li><a href="https://www.aram.cz/article/custom-permissions-drupal-8">https://www.aram.cz/article/custom-permissions-drupal-8</a></li>
+							<li><a href="http://kevinquillen.com/drupal/2016/02/21/dynamic-permissions-in-drupal-8">http://kevinquillen.com/drupal/2016/02/21/dynamic-permissions-in-drupal-8</a></li>
+							<li><a href="https://books.google.com/books?id=JrW9CgAAQBAJ&pg=PA66&lpg=PA66&dq=drupal+8+dynamic+permissions&source=bl&ots=_hAJX2VabR&sig=Gb_-poAvmV8pylM1alul2WCsSRA&hl=en&sa=X&ved=0ahUKEwi_x6f89vHbAhXDh1QKHe9XAXE4FBDoAQhRMAY#v=onepage&q=drupal%208%20dynamic%20permissions&f=false">Programmer's Guide to Drupal: Principles, Practices, and Pitfalls</a></li>
+							<li><a href="https://books.google.com/books?id=pM7cDgAAQBAJ&pg=PA554&lpg=PA554&dq=drupal+8+dynamic+permissions&source=bl&ots=TXWp9eVH4h&sig=r-KIhVu4wZXGu2RxG5ilCMEedNI&hl=en&sa=X&ved=0ahUKEwixxKWI9_HbAhVvCTQIHfMxAcg4HhDoAQhTMAg#v=onepage&q=drupal%208%20dynamic%20permissions&f=false">Drupal 8: Enterprise Web Development</a></li>
 						</ul>
 					</div>
 					<div class="font-10">
 						<h3>Forms</h3>
 						<ul>
+							<li><a href="https://www.drupal.org/docs/8/api/form-api/introduction-to-form-api">https://www.drupal.org/docs/8/api/form-api/introduction-to-form-api</a></li>
+							<li><a href="https://valuebound.com/resources/blog/step-by-step-method-to-create-a-custom-form-in-drupal-8">https://valuebound.com/resources/blog/step-by-step-method-to-create-a-custom-form-in-drupal-8</a></li>
+							<li><a href="https://www.velir.com/blog/2016/01/04/technical-guide-drupal-8-forms">https://www.velir.com/blog/2016/01/04/technical-guide-drupal-8-forms</a></li>
+							<li><a href="http://cgit.drupalcode.org/examples/tree/form_api_example">http://cgit.drupalcode.org/examples/tree/form_api_example</a></li>
+						</ul>
+					</div>
+					<div class="font-10">
+						<h3>Libraries</h3>
+						<ul>
 							<li>
-								<a href="https://www.drupal.org/docs/8/api/form-api/introduction-to-form-api">https://www.drupal.org/docs/8/api/form-api/introduction-to-form-api</a>
-							</li>
-							<li>
-								<a href="https://valuebound.com/resources/blog/step-by-step-method-to-create-a-custom-form-in-drupal-8">https://valuebound.com/resources/blog/step-by-step-method-to-create-a-custom-form-in-drupal-8</a>
-							</li>
-							<li>
-								<a href="https://www.velir.com/blog/2016/01/04/technical-guide-drupal-8-forms">https://www.velir.com/blog/2016/01/04/technical-guide-drupal-8-forms</a>
-							</li>
-							<li>
-								<a href="http://cgit.drupalcode.org/examples/tree/form_api_example">http://cgit.drupalcode.org/examples/tree/form_api_example</a>
+								<a href="https://en.wikipedia.org/wiki/Library_(computing)">https://en.wikipedia.org/wiki/Library_(computing)</a>
 							</li>
 						</ul>
 					</div>
