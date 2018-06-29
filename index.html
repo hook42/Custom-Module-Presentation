@@ -665,6 +665,55 @@ modules
 				</section>
 
 				<section>
+					<h3>Plugins and Custom Blocks</h3>
+					<div class="left font-25">
+						<ul>
+							<li class="fragment">
+								Plugins are small pieces of functionality that are swappable
+							</li>
+							<li class="fragment">
+								Plugins that perform similar funcitonality are of the same plugin type
+							</li>
+							<li class="fragment">
+								Blocks are instances of the block <a href="https://www.drupal.org/developing/api/8/plugins">plugin</a>.
+							</li>
+							<li class="fragment">
+									Plugin code must live in /src/Plugin/[plugin_type/Example.php
+								<ul>
+									<li>
+										Blocks: /src/Plugin/Block/*
+									</li>
+									<li>
+										Field formatters, Field widgets: /src/Plugin/Field/*
+									</li>
+									<li>
+										Views plugins: /src/Plugin/views/*
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="right fragment">
+						<img src="images/capable-custom-block-plugin-file-location.png" />
+					</div>
+				</section>
+
+				<section>
+					<h3>CapableBlock.php</h3>
+					<div class="left-40">
+						<img src="images/capable-custom-block-plugin-code.png" />
+					</div>
+					<div class="right-60">
+						<img src="images/capable-custom-block-plugin-screenshot.png" />
+					</div>
+				</section>
+
+				<section>
+					Services should go here:
+					https://www.drupal.org/docs/8/api/plugin-api/why-plugins
+				</section>
+
+				<section>
 					<h3>Module Theming</h3>
 					why do theming in your module instead of your theme
 				</section>
