@@ -385,6 +385,14 @@ body {
   width: 55%;
   float: right; }
 
+.reveal .left-60 {
+  width: 55%;
+  float: left; }
+
+.reveal .right-40 {
+  width: 40%;
+  float: right; }
+
 .reveal .no-margin {
   margin-top: 0px;
   margin-bottom: 0px; }
