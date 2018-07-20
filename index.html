@@ -107,11 +107,26 @@
 				</section>
 
 				<section>
+					<h3>Composer</h3>
+					<ul>
+						<li class="fragment">
+							Dependency/package manager: software the automates the process of installing upgrading, configuring and removing software.
+						</li>
+						<li class="fragment">
+							Composer is a dependency manager for PHP, that assists with locating, downloading, validating, and loading packages and ensures you have the correct package version
+						</li>
+						<li>
+							DO YOU NEED TO TIE COMPOSER IN WITH SYMFONY???
+						</li>
+					</ul>
+				</section>
+
+				<section>
 					<h3> Symfony</h3>
 					<ul>
-						<li>Symfony is a PHP framework and a set of reuasable PHP components and libraries</li>
-						<li>Defined as a MVC (Model, View, and Controller) framework</li>
-						<li>Components are standalone PHP libraries that generate specific features</li>
+						<li class="fragment">Symfony is a PHP framework and a set of reuasable PHP components and libraries</li>
+						<li class="fragment">Defined as a MVC (Model, View, and Controller) framework</li>
+						<li class="fragment">Components are standalone PHP libraries that generate specific features</li>
 					</ul>
 				</section>
 
@@ -140,6 +155,9 @@
 					<ul class="font-25">
 						<li class="fragment">
 							Autoloading and namespacing play an important role in how and why we structure files and code in a module
+						</li>
+						<li class="fragment">
+							While Drupal Core uses Composer, you can also manage dependencies for your custom module with Composer
 						</li>
 						<li class="fragment">
 							While Drupal 8 does NOT use the Symfony framework, D8 uses some Symfony components: ClassLoader, DependencyInjection, EventDispatcher, HTTPFoundation, HTTPKernel, Routing, Serializer, Validator, YAML
@@ -536,6 +554,36 @@ modules
 
 				<section>
 					<h3>composer.json</h3>
+					<ul class="font-25">
+						<li class="fragment">
+							If your module has a dependency to a third party library hosted on Packagist, you can define this dependency
+						</li>
+						<li class="fragment">
+							Also declared dependencies in your info.yml file, but composes.json hcan let you get more sepcific with constraints
+						</li>
+						<li class="fragment">
+							If your module does not have any dependencies, composer.json is not required, but having it will not have a negative impact
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>composer.json</h3>
+					<p class="font-16 fragment">
+						If your custom module is not hosted of Packagist or Drupal.org, you must use <code>wikimedia/composer-merge-plugin</code> package for your Drupal site's composer.json to read you custom module's composer.json file
+					</p>
+					<img src="images/wikimedia-composer-merge-plugin.png" style="height: 100px;" class="fragment no-margin"/>
+					<p class="font-16 fragment">
+						You will need to reference your custom module's composer.json file in the <code>extra</code> section of your Drupal site's composer.json file
+					</p>
+					<img src="images/composer-require-module-json.png" style="height: 300px;" class="fragment no-margin"/>
+					<p class="font-16 fragment">
+						Now run <code>composer install</code> and your custom module's composer.json will be seen
+					</p>
+ 				</section>
+
+				<section>
+					<h3>Composer</h3>
 				</section>
 
 				<section>
@@ -879,6 +927,17 @@ modules
 						<ul>
 							<li>
 								<a href="https://www.drupal.org/docs/8/creating-custom-modules/create-a-custom-block">https://www.drupal.org/docs/8/creating-custom-modules/create-a-custom-block</a>
+							</li>
+						</ul>
+					</div>
+					<div class="font-10">
+						<h3>Composer</h3>
+						<ul>
+							<li>
+								<a href="https://www.drupal.org/docs/8/creating-custom-modules/add-a-composerjson-file">https://www.drupal.org/docs/8/creating-custom-modules/add-a-composerjson-file</a>
+							</li>
+							<li>
+								<a href="https://www.drupal.org/docs/develop/using-composer/managing-dependencies-for-a-custom-project">https://www.drupal.org/docs/develop/using-composer/managing-dependencies-for-a-custom-project</a>
 							</li>
 						</ul>
 					</div>
