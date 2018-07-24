@@ -559,7 +559,7 @@ modules
 							If your module has a dependency to a third party library hosted on Packagist, you can define this dependency
 						</li>
 						<li class="fragment">
-							Also declared dependencies in your info.yml file, but composes.json hcan let you get more sepcific with constraints
+							Also declared dependencies in your info.yml file, but composer.json can let you get more specific with constraints
 						</li>
 						<li class="fragment">
 							If your module does not have any dependencies, composer.json is not required, but having it will not have a negative impact
@@ -569,6 +569,7 @@ modules
 
 				<section>
 					<h3>composer.json</h3>
+					<h2>THIS NEEDS MUCH MORE ATTENTION!!!</h2>
 					<p class="font-16 fragment">
 						If your custom module is not hosted of Packagist or Drupal.org, you must use <code>wikimedia/composer-merge-plugin</code> package for your Drupal site's composer.json to read you custom module's composer.json file
 					</p>
@@ -817,6 +818,12 @@ modules
 									<a href="https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Render%21theme.api.php/function/hook_element_info_alter/8.3.x" >hook_element_info_alter()</a>: a module implements this hook to alter the element type defaults defined by a module
 								</li>
 								<li class="fragment">
+									Attach to a render away
+								</li>
+								<li class="fragment">
+									Attach a library to a form
+								</li>
+								<li class="fragment">
 									<a href="https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Render%21theme.api.php/function/hook_page_attachments/8.3.x">hook_page_attachments()</a>: conditionally add assets to a page
 								</li>
 								<li class="fragment">
@@ -841,6 +848,8 @@ modules
 				<section>
 					<h3>CSS</h3>
 					<ul>
+
+
 						<li>
 							how to set css weights in styling: https://www.drupal.org/docs/8/creating-custom-modules/adding-stylesheets-css-and-javascript-js-to-a-drupal-8-module
 						</li>
@@ -900,6 +909,9 @@ modules
 						<h3>Example Modules:</h3>
 						<ul>
 							<li>http://cgit.drupalcode.org/examples/tree/?h=8.x-1.x</li>
+							<li>
+								<a href="https://api.drupal.org/api/examples">https://api.drupal.org/api/examples</a>
+							</li>
 						</ul>
 					</div>
 					<div class="font-10">
