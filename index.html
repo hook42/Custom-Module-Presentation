@@ -800,12 +800,9 @@ modules
 
 				<section>
 					<h3>capable.libraries.yml</h3>
-					<div class="left">
-						<img src="images/capable-libraries-file-location.png" />
-					</div>
-					<div class="right">
-						<img src="images/capable-libraries-file.png" />
-					</div>
+					<img src="images/capable-libraries-file-location.png" class="fragment"/>
+					<img src="images/capable-libraries-file.png"  class="fragment"/>
+					<img src="images/css-js-assets.png" class="fragment"/>
 				</section>
 
 				<section>
@@ -818,8 +815,9 @@ modules
 									<a href="https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Render%21theme.api.php/function/hook_element_info_alter/8.3.x" >hook_element_info_alter()</a>: a module implements this hook to alter the element type defaults defined by a module
 								</li>
 								<li class="fragment">
-									Attach to a render away
+									Attach to a render array
 								</li>
+
 								<li class="fragment">
 									Attach a library to a form
 								</li>
@@ -835,6 +833,20 @@ modules
 							</ul>
 						</li>
 					</ul>
+				</section>
+
+				<section>
+					<h3>Load Library to a Form</h3>
+					<div>
+						<span class="font-20">Attach the library in the buildForm function in the CapableForm.php file</span>
+						<img src="images/form-library-attached.png" />
+					</div>
+				</section>
+
+				<section>
+					<h3>Load Library to a Form</h3>
+					<img src="images/form-library-attached-screenshot.png" style="height: 430px; float: left;"/>
+					<img src="images/form-library-loading.png" style="float:right;"/>
 				</section>
 
 				<section>
