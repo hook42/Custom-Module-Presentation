@@ -815,7 +815,7 @@ modules
 									<a href="https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Render%21theme.api.php/function/hook_element_info_alter/8.3.x" >hook_element_info_alter()</a>: a module implements this hook to alter the element type defaults defined by a module
 								</li>
 								<li class="fragment">
-									render array: <code>$build['the_element_that_needs_the_asset_library']['#attached']['library'][] = 'your_module/library_name';</code>
+									<a href="https://www.drupal.org/docs/8/api/render-api/render-arrays">Render array</a>: a structured array that provides data (probably nested) along with hints as to how it should be rendered 
 								</li>
 								<li class="fragment">
 									<a href="https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Render%21theme.api.php/function/hook_page_attachments/8.3.x">hook_page_attachments()</a>: conditionally add assets to a page
@@ -841,6 +841,12 @@ modules
 				</section>
 
 				<section>
+					<h3>Globally Load a Library </h3>
+					<img src="images/globally-attach-screenshot.png" style="height: 300px"/>
+					<img src="images/globally-attach-file-load.png" />
+				</section>
+
+				<section>
 					<h3>Load Library to a Form</h3>
 					<div>
 						<span class="font-20">Attach the library in the render array buildForm function in the CapableForm.php file<br />
@@ -857,7 +863,14 @@ modules
 
 				<section>
 					<h3>Load a Library to an element</h3>
-					<span class="font-20">Attach a library to a specific <code>#type</code>, so the library only loads if it is relevant</span>
+					<span class="font-20">Attach a library to a specific <code>#type</code>: the library only loads if that #type exists</span>
+					<img src="images/type-select.png" style="height: 160px; float: left;"/>
+					<img src="images/capable-element-info-alter.png" style="height: 400px; float: right;"/>
+				</section>
+
+				<section>
+					<h3>Load a Library to an element</h3>
+					<img src="images/select-element-info-screenshot.png" />
 				</section>
 
 				<section>
