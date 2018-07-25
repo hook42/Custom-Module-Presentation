@@ -815,7 +815,7 @@ modules
 									<a href="https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Render%21theme.api.php/function/hook_element_info_alter/8.3.x" >hook_element_info_alter()</a>: a module implements this hook to alter the element type defaults defined by a module
 								</li>
 								<li class="fragment">
-									<a href="https://www.drupal.org/docs/8/api/render-api/render-arrays">Render array</a>: a structured array that provides data (probably nested) along with hints as to how it should be rendered 
+									<a href="https://www.drupal.org/docs/8/api/render-api/render-arrays">Render array</a>: a structured array that provides data (probably nested) along with hints as to how it should be rendered
 								</li>
 								<li class="fragment">
 									<a href="https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Render%21theme.api.php/function/hook_page_attachments/8.3.x">hook_page_attachments()</a>: conditionally add assets to a page
@@ -875,7 +875,9 @@ modules
 
 				<section>
 					<h3>Load a Library to a twig template</h3>
-					<span class="font-20"><code>{{ attach_library('your_module/library_name') }}</code></span>
+					<span class="font-20"><code>{{ attach_library('your_module/library_name') }}</code></span><br />
+					<img src="images/wecome-html-twig-file.png" style="width: 500px; float: left;"/>
+					<img src="images/welcome-page-screenshot.png"style="width: 400px;" />
 				</section>
 
 				<section>
@@ -884,11 +886,49 @@ modules
 
 				<section>
 					<h3>CSS</h3>
-					<ul
-						<li>
-							how to set css weights in styling: https://www.drupal.org/docs/8/creating-custom-modules/adding-stylesheets-css-and-javascript-js-to-a-drupal-8-module
+					<ul class="font-20">
+						<li class="fragment">
+							All styles should be placed under the css folder
+						</li>
+						<li class="fragment">
+							Drupal 8 folows <a href="https://smacss.com/">SMACSS-style</a> categorization of its CSS rules
+							<ul>
+								<li>
+									Base: CSS reset/normalize plus HTML element styling. Weight: -200
+								</li>
+								<li>
+									Layout: macro arrangement of a web page, including any grid systems. Weight: -100
+								</li>
+								<li>
+									Component: discrete, reusable UI elements. Weight: 0
+								</li>
+								<li>
+									State: styles that deal with client-side changes to components. Weight: 100
+								</li>
+								<li>
+									Theme: purely visual styling (“look-and-feel”) for a component. Weight: 200
+								</li>
+							</ul>
+						</li>
+						<li class="fragment">
+							CSS file organization
+							<ul>
+								<li>
+									<code>module_name.module.css</code>: minimal styles needed to get the module's functionality working, includes layout, component and state styles.
+								</li>
+								<li>
+									<code>module_name.theme.css</code>: extra styles to make the module's functionality aesthetically pleasing, consists of theme styles.
+								</li>
+								<li>
+									<code>module_name.admin.css</code>: minimal styles needed to get the module's admin screens working, includes layout, component and state styles. On admin screens, the module may choose to load the *.module.css in addition to the *.admin.css file.
+								</li>
+								<li>
+									<code>module_name.admin.theme.css</code>: extra styles to make the module's admin screens aesthetically pleasing, consists of theme styles.
+								</li>
+							</ul>
 						</li>
 					</ul>
+
 				</section>
 
 				<section>
