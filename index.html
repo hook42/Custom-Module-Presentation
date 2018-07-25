@@ -809,36 +809,42 @@ modules
 					<h3>Load the Library</h3>
 					<ul class="font-25">
 						<li>
-							Can attach a library in several ways:
-							<ul>
+							 Attach a library in several ways:
+							<ol>
 								<li class="fragment">
 									<a href="https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Render%21theme.api.php/function/hook_element_info_alter/8.3.x" >hook_element_info_alter()</a>: a module implements this hook to alter the element type defaults defined by a module
 								</li>
 								<li class="fragment">
-									Attach to a render array
-								</li>
-
-								<li class="fragment">
-									Attach a library to a form
+									render array: <code>$build['the_element_that_needs_the_asset_library']['#attached']['library'][] = 'your_module/library_name';</code>
 								</li>
 								<li class="fragment">
 									<a href="https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Render%21theme.api.php/function/hook_page_attachments/8.3.x">hook_page_attachments()</a>: conditionally add assets to a page
 								</li>
 								<li class="fragment">
-									<a href="https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Render%21theme.api.php/function/hook_preprocess_HOOK/8.3.x">template_preprocess_HOOK()</a>: lets modules preprocess theme variables for a specific theme hook
+									<a href="https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Render%21theme.api.php/function/hook_preprocess_HOOK/8.3.x">template_preprocess_hook()</a>: lets modules preprocess theme variables for a specific theme hook
 								</li>
 								<li class="fragment">
 									<a href="https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Template%21TwigExtension.php/function/TwigExtension%3A%3AattachLibrary/8.3.x">{{ attach_library(‘example/example’) }}</a>: attaches an asset to a the twig template
 								</li>
-							</ul>
+							</ol>
+							<li class="fragment">
+								Note: <code>drupal_add_css()</code>, <code>drupal_add_js()</code> and <code>drupal_add_library()</code> were replaced with <code> #attached</code>
+							</li>
 						</li>
 					</ul>
 				</section>
 
 				<section>
+					<h3>Globally Load a Library </h3>
+					<span class="font-20">Attach the library to all pages with hook_page_attachments in capable.module</span>
+					<img src="images/globally-attach-page-attachments.png" />
+				</section>
+
+				<section>
 					<h3>Load Library to a Form</h3>
 					<div>
-						<span class="font-20">Attach the library in the buildForm function in the CapableForm.php file</span>
+						<span class="font-20">Attach the library in the render array buildForm function in the CapableForm.php file<br />
+						<code>$form['#attached']['library'][] = 'module-name/library-name'</code></span>
 						<img src="images/form-library-attached.png" />
 					</div>
 				</section>
@@ -850,7 +856,13 @@ modules
 				</section>
 
 				<section>
-					<h3>External Library</h3>
+					<h3>Load a Library to an element</h3>
+					<span class="font-20">Attach a library to a specific <code>#type</code>, so the library only loads if it is relevant</span>
+				</section>
+
+				<section>
+					<h3>Load a Library to a twig template</h3>
+					<span class="font-20"><code>{{ attach_library('your_module/library_name') }}</code></span>
 				</section>
 
 				<section>
@@ -859,9 +871,7 @@ modules
 
 				<section>
 					<h3>CSS</h3>
-					<ul>
-
-
+					<ul
 						<li>
 							how to set css weights in styling: https://www.drupal.org/docs/8/creating-custom-modules/adding-stylesheets-css-and-javascript-js-to-a-drupal-8-module
 						</li>
