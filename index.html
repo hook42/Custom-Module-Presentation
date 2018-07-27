@@ -369,7 +369,7 @@ modules
 
 				<section>
 					<h3>Routing + Controller Working Together</h3>
-					<img src="images/routing-file-simple-outlined.png" style="height: 130px;"/>
+					<img src="images/routing-file-simple-outlined.png" style="height: 130px; vertical-align: top;"/>
 					<img src="images/capable-controller-file-outlined.png" style="height: 225px;"/>
 					<img src="images/routing-file-screenshot.png" style="height: 275px;" />
 				</section>
@@ -547,7 +547,7 @@ modules
 
 				<section>
 					<h3>capable.module</h3>
-					<img src="images/capable-module-module-file.png" style="height: 200px;" class="fragment"/>
+					<img src="images/capable-module-module-file.png" style="height: 200px; vertical-align: top;" class="fragment"/>
 					<img src="images/capable-module-module-file-code.png" style="height: 300px;" class="fragment"/>
 					<img src="images/capable-module-module-file-screenshot.png" style="height: 200px;" class="fragment" />
 				</section>
@@ -796,14 +796,14 @@ modules
 							Attach the library to a render array in a hook
 						</li>
 					</ul>
-					<img src="images/libraries.gif" class="fragment"/>
+					<img src="images/libraries.gif" class="fragment" style="height: 200px;"/>
 				</section>
 
 				<section>
 					<h3>capable.libraries.yml</h3>
-					<img src="images/capable-libraries-file-location.png" class="fragment"/>
-					<img src="images/capable-libraries-file.png"  class="fragment"/>
-					<img src="images/css-js-assets.png" class="fragment"/>
+					<img src="images/capable-libraries-file-location.png" class="fragment" style="vertical-align: top;"/>
+					<img src="images/capable-libraries-file.png"  class="fragment" style="vertical-align: top;"/>
+					<img src="images/css-js-assets.png" class="fragment" style="vertical-align: top;"/>
 				</section>
 
 				<section>
@@ -843,7 +843,7 @@ modules
 
 				<section>
 					<h3>Globally Load a Library </h3>
-					<img src="images/globally-attach-screenshot.png" style="height: 350px"/>
+					<img src="images/globally-attach-screenshot.png" style="height: 350px" class="no-margin"/>
 					<img src="images/globally-attach-file-load.png" style="height: 200px"/>
 				</section>
 
@@ -858,8 +858,8 @@ modules
 
 				<section>
 					<h3>Load Library to a Form</h3>
-					<img src="images/form-library-attached-screenshot.png" style="height: 350px;"/>
-					<img src="images/form-library-loading.png" class="no-margin"/>
+					<img src="images/form-library-attached-screenshot.png" style="height: 300px;" class="no-margin"/>
+					<img src="images/form-library-loading.png"/>
 				</section>
 
 				<section>
@@ -883,10 +883,6 @@ modules
 				<section>
 					<h3>Load a Library to a twig template</h3>
 					<img src="images/welcome-page-screenshot.png" />
-				</section>
-
-				<section>
-					<h3>Javascript</h3>
 				</section>
 
 				<section>
@@ -933,11 +929,59 @@ modules
 							</ul>
 						</li>
 					</ul>
+				</section>
 
+				<section>
+					<h3>CSS Weights</h3>
+					<img src="images/css-loading-weights.png" style="vertical-align: top;"/>
+					<img src="images/capable-libraries-file.png" />
+				</section>
+
+				<section>
+					<h3>Javascript</h3>
 				</section>
 
 				<section>
 					<h3>Twig Templates</h3>
+					<ul class="font-25">
+						<li class="fragment">
+							<a href="https://twig.symfony.com/doc/1.x/">Twig</a> is a flexible templating engine for PHP, helps you create custom pages
+						</li>
+						<li class="fragment">
+							The <a href="https://www.drupal.org/docs/8/theming/twig"> *.html.twig files</a> have replaced the *.tpl.php files of Drupal 7
+						</li>
+						<li class="fragment">
+							Steps to create custom twig templates for custom module
+							<ol class="fragment">
+								<li>
+									Define the hook_theme in the .module file
+								</li>
+								<li>
+									Call the template
+								</li>
+								<li>
+									Create the twig template, located in a templates folder
+								</li>
+							</ol>
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>1. Define the hook_theme</h3>
+					<img src="images/capable-module-twig.png" />
+				</section>
+
+				<section>
+					<h3>2. Call the template</h3>
+					<img src="images/capable-controller-twig.png" />
+					<img src="images/capable-router-twig.png" style="vertical-align: top;"/>
+				</section>
+
+				<section>
+					<h3>3. Create the twig template</h3>
+					<img src="images/capable-module-templates-folder.png" style="height:500px;"/>
+					<img src="images/twig-template.png"  style="height:500px;"/>
 				</section>
 
 				<section>
@@ -950,7 +994,8 @@ modules
 				</section>
 
 				<section>
-					<div class="font-10">
+					<span class="bibliography">
+					<div class="font-10 bib">
 						<h3>General</h3>
 						<ul>
 							<li><a href="https://www.drupal.org/docs/8/creating-custom-modules/a-practical-guide-to-building-basic-drupal-8-modules">https://www.drupal.org/docs/8/creating-custom-modules/a-practical-guide-to-building-basic-drupal-8-modules</a></li>
@@ -959,9 +1004,12 @@ modules
 							<li>
 								<a href="https://en.wikipedia.org/wiki/Application_programming_interface">https://en.wikipedia.org/wiki/Application_programming_interface</a>
 							</li>
+							<li>
+								<a href="https://www.drupal8.ovh/index.php/en">https://www.drupal8.ovh/index.php/en</a>
+							</li>
 						</ul>
 					</div>
-					<div class="font-10">
+					<div class="font-10 bib">
 						<h3>Namespaces</h3>
 						<ul>
 							<li><a href="https://www.sitepoint.com/php-53-namespaces-basics/">https://www.sitepoint.com/php-53-namespaces-basics/</a></li>
@@ -970,7 +1018,7 @@ modules
 							<li><a href="https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader-examples.md">https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader-examples.md</a></li>
 						</ul>
 					</div>
-					<div class="font-10">
+					<div class="font-10 bib">
 						<h3>Symfony</h3>
 						<ul>
 							<li><a href="https://symfony.com/doc/current/controller.html">https://symfony.com/doc/current/controller.html</a></li>
@@ -978,23 +1026,23 @@ modules
 							<li><a href="https://symfony.com/doc/current/components/yaml.html">https://symfony.com/doc/current/components/yaml.html</a></li>
 						</ul>
 					</div>
-					<div class="font-10">
+					<div class="font-10 bib">
 						<h3>Routing</h3>
 						<ul>
 							<li><a href="https://www.drupal.org/node/2116767">https://www.drupal.org/node/2116767</a></li>
 							<li><a href="https://www.drupal.org/docs/8/api/routing-system/structure-of-routes">https://www.drupal.org/docs/8/api/routing-system/structure-of-routes</a></li>
 						</ul>
 					</div>
-					<div class="font-10">
+					<div class="font-10 bib">
 						<h3>Example Modules:</h3>
 						<ul>
-							<li>http://cgit.drupalcode.org/examples/tree/?h=8.x-1.x</li>
+							<li><a href="http://cgit.drupalcode.org/examples/tree/?h=8.x-1.x">http://cgit.drupalcode.org/examples/tree/?h=8.x-1.x</a></li>
 							<li>
 								<a href="https://api.drupal.org/api/examples">https://api.drupal.org/api/examples</a>
 							</li>
 						</ul>
 					</div>
-					<div class="font-10">
+					<div class="font-10 bib">
 						<h3>Hooks</h3>
 						<ul>
 							<li><a href="https://en.wikipedia.org/wiki/Hooking">https://en.wikipedia.org/wiki/Hooking</a></li>
@@ -1003,7 +1051,7 @@ modules
 							</li>
 						</ul>
 					</div>
-					<div class="font-10">
+					<div class="font-10 bib">
 						<h3>Permissions</h3>
 						<ul>
 							<li><a href="https://www.drupal8.ovh/en/tutoriels/66/create-a-custom-permission-drupal-8">https://www.drupal8.ovh/en/tutoriels/66/create-a-custom-permission-drupal-8</a></li>
@@ -1014,7 +1062,7 @@ modules
 						</ul>
 					</div>
 
-					<div class="font-10">
+					<div class="font-10 bib">
 						<h3>Plugins and Custom Blocks</h3>
 						<ul>
 							<li>
@@ -1022,7 +1070,7 @@ modules
 							</li>
 						</ul>
 					</div>
-					<div class="font-10">
+					<div class="font-10 bib">
 						<h3>Composer</h3>
 						<ul>
 							<li>
@@ -1034,7 +1082,7 @@ modules
 						</ul>
 					</div>
 
-					<div class="font-10">
+					<div class="font-10 bib">
 						<h3>Dependency Injection + Services</h3>
 						<ul>
 							<li>
@@ -1042,7 +1090,7 @@ modules
 							</li>
 						</ul>
 					</div>
-					<div class="font-10">
+					<div class="font-10 bib">
 						<h3>Forms</h3>
 						<ul>
 							<li><a href="https://www.drupal.org/docs/8/api/form-api/introduction-to-form-api">https://www.drupal.org/docs/8/api/form-api/introduction-to-form-api</a></li>
@@ -1051,14 +1099,36 @@ modules
 							<li><a href="http://cgit.drupalcode.org/examples/tree/form_api_example">http://cgit.drupalcode.org/examples/tree/form_api_example</a></li>
 						</ul>
 					</div>
-					<div class="font-10">
-						<h3>Libraries</h3>
+					<div class="font-10 bib">
+						<h3>Module Theming</h3>
 						<ul>
 							<li>
 								<a href="https://en.wikipedia.org/wiki/Library_(computing)">https://en.wikipedia.org/wiki/Library_(computing)</a>
 							</li>
+							<li>
+								<a href="https://www.drupal.org/docs/8/creating-custom-modules/adding-stylesheets-css-and-javascript-js-to-a-drupal-8-module">https://www.drupal.org/docs/8/creating-custom-modules/adding-stylesheets-css-and-javascript-js-to-a-drupal-8-module</a>
+							</li>
+							<li>
+								<a href="https://www.drupal.org/node/1887922">https://www.drupal.org/node/1887922</a>
+							</li>
+							<li>
+								<a href="https://www.drupal.org/docs/8/creating-custom-modules/adding-stylesheets-css-and-javascript-js-to-a-drupal-8-module">https://www.drupal.org/docs/8/creating-custom-modules/adding-stylesheets-css-and-javascript-js-to-a-drupal-8-module</a>
+							</li>
+							<li>
+								<a href="https://www.drupal.org/node/1887922">https://www.drupal.org/node/1887922</a>
+							</li>
+							<li>
+								<a href="https://docs.acquia.com/tutorials/fast-track-drupal-8-coding/define-custom-template-module-output/">https://docs.acquia.com/tutorials/fast-track-drupal-8-coding/define-custom-template-module-output/</a>
+							</li>
+							<li>
+								<a href="https://www.drupal.org/docs/8/theming/twig">https://www.drupal.org/docs/8/theming/twig</a>
+							</li>
+							<li>
+								<a href="https://www.drupal.org/docs/8/theming/twig/create-custom-twig-templates-for-custom-module">https://www.drupal.org/docs/8/theming/twig/create-custom-twig-templates-for-custom-module</a>
+							</li>
 						</ul>
 					</div>
+				</span>
 				</section>
 				<section>
 					<h3>Questions?</h3>
