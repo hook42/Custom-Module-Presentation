@@ -107,11 +107,6 @@
 				</section>
 
 				<section>
-					<h3>Namespacing: Code Examples</h3>
-					https://www.php-fig.org/psr/psr-4/
-				</section>
-
-				<section>
 					<h3>Composer</h3>
 					<ul>
 						<li class="fragment">
@@ -574,7 +569,7 @@ modules
 
 				<section>
 					<h3>composer.json</h3>
-					
+
  				</section>
 
 				<section>
@@ -1027,7 +1022,47 @@ modules
 				</section>
 
 				<section>
-					<h3>Tests</h3>
+					<h3>Testing</h3>
+					<ul class="font-25">
+						<li>
+							QA your module to make sure its working, tests run by Drupal
+						</li>
+						<li>
+							Tests live under the /tests/src folder and then under its relative folder (Functional, Kernel, Unit)
+							<ul>
+								<li>
+									Unit: tests on functions methods and classes. Extend the base class <a href="https://api.drupal.org/api/drupal/core%21tests%21Drupal%21Tests%21UnitTestCase.php/class/UnitTestCase/8.3.x">UnitTestCase</a>
+								</li>
+								<li>
+									Kernel: integration test that test on components. Extend the base classes: <a href="https://api.drupal.org/api/drupal/core%21tests%21Drupal%21KernelTests%21KernelTestBase.php/class/KernelTestBase/8.3.x">KernelTestBase</a> and <a href="https://api.drupal.org/api/drupal/core%21tests%21Drupal%21KernelTests%21Core%21Entity%21EntityKernelTestBase.php/class/EntityKernelTestBase/8.3.x"> EntityKernelTestBase</a>
+								</li>
+								<li>
+									Functional: test on the complete system. Tutorials for <a href="https://www.drupal.org/docs/8/phpunit/phpunit-browser-test-tutorial">BrowserTestBase</a> and <a href="https://www.drupal.org/docs/8/phpunit/phpunit-javascript-testing-tutorial">JavascriptTestBase</a>
+									<ul>
+										<li>
+											BrowserTestBase: test web-based behaviors and interactions. Spins up a complete Drupal installation and veritual web browser, and tests int he virtual web browser.
+										</li>
+										<li>
+											JavascriptTestBase: tests how the system works for a user with Javascript enabled.
+										</li>
+										<li>
+											Legacy support for Simpletest's <a href="https://api.drupal.org/api/drupal/core%21modules%21simpletest%21src%21WebTestBase.php/class/WebTestBase/8.3.x">WebTestBase</a> framework
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Testing</h3>
+					suffix of the filename shoudl be test
+					clear caches!
+				</section>
+
+				<section>
+					<h3>Run the Tests</h3>
 				</section>
 
 				<section>
@@ -1172,6 +1207,20 @@ modules
 							</li>
 							<li>
 								<a href="http://cgit.drupalcode.org/examples/tree/js_example">http://cgit.drupalcode.org/examples/tree/js_example</a>
+							</li>
+						</ul>
+					</div>
+					<div class="font-10 bib">
+						<h3>Testing</h3>
+						<ul>
+							<li>
+								<a href="https://www.drupal.org/docs/8/creating-custom-modules/testing">https://www.drupal.org/docs/8/creating-custom-modules/testing</a>
+							</li>
+							<li>
+								<a href="https://www.drupal.org/docs/8/testing/types-of-tests-in-drupal-8">https://www.drupal.org/docs/8/testing/types-of-tests-in-drupal-8</a>
+							</li>
+							<li>
+								<a href="https://www.drupal.org/node/2116043">https://www.drupal.org/node/2116043</a>
 							</li>
 						</ul>
 					</div>
