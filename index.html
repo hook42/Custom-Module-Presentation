@@ -197,14 +197,13 @@
 				</section>
 
 				<section>
-					<h3>Capable Module</h3>
+					<h3 class="font-20">Capable Module</h3>
 					<div class="module-files">
 <pre class="font-10">
 modules
 	/contrib
 	/custom
 		/capable
-			.estlintrc
 			README.md
 			STANDARDS.md
 			TESTING.md
@@ -225,7 +224,11 @@ modules
 				/schema
 					capable.schema.yml
 			/css
-				main.css
+				capable.form.css
+				capable.miscellaneous.css
+				capable.module.css
+				capable.template.css
+				capable.theme.css
 			drupalci.yml
 			/js
 				main.js
@@ -235,12 +238,20 @@ modules
 				/Entity
 					Robot.php
 				/Form
-					SignUpForm.php (might need to fix this)
+					CapableForm.php
 				/Plugin
-					[need to find an example plugin]
+					/Block
+						CapableBlock.php
 			/templates
-				homepage.html.twig
+				welcome.html.twig
 			/tests
+				/src
+					/Functional
+						ExampleFunctionalTest.php
+					/Kernel
+						ExampleKernelTest.php
+					/Unit
+						ExampleUnitTest.php
 </pre>
 					</div>
 				</section>
@@ -700,7 +711,7 @@ modules
 
 				<section>
 					<h3>Dependency Injection</h3>
-					<ul>
+					<ul class="font-25">
 						<li>
 							A object oriented programming software design process that supplies a resource the code it requires
 						</li>
@@ -1076,6 +1087,21 @@ modules
 						</li>
 						<img src="images/capable-test-pass.png" style="height: 220px;" class="fragment"/>
 					</ol>
+				</section>
+
+				<section>
+					<h3>Documentation</h3>
+					<ul class="font-25">
+						<li>
+							<a href="https://www.drupal.org/docs/develop/documenting-your-project/readme-template">README.md</a>: general information about the module including - Table of Contents, Introduction (summary of the module), Requirements, Recommended modules, Installation, Configuration, Troubleshooting, FAQ and Maintainers
+						</li>
+						<li>
+							<a href="http://cgit.drupalcode.org/examples/tree/STANDARDS.md">STANDARDS.md</a>: details coding standards for the module
+						</li>
+						<li>
+							<a href="http://cgit.drupalcode.org/examples/tree/TESTING.md">TESTING.md</a>: details of how to test the module
+						</li>
+					</ul>
 				</section>
 
 				<section>
