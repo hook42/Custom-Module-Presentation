@@ -229,7 +229,6 @@ modules
 				capable.module.css
 				capable.template.css
 				capable.theme.css
-			drupalci.yml
 			/js
 				main.js
 			/src
@@ -383,11 +382,6 @@ modules
 					<img src="images/routing-file-simple-outlined.png" style="height: 130px; vertical-align: top;"/>
 					<img src="images/capable-controller-file-outlined.png" style="height: 225px;"/>
 					<img src="images/routing-file-screenshot.png" style="height: 275px;" />
-				</section>
-
-				<section>
-					<h3>Routing + Controller Working Together</h3>
-					<img src="images/d8-routing.png" />
 				</section>
 
 				<section>
@@ -653,13 +647,50 @@ modules
 				</section>
 
 				<section>
-					<h3>Config</h3>
-					from here: https://www.drupal.org/docs/8/creating-custom-modules/basic-structure
-						settings.yml <br />
-						This file stores configuration defaults, which are assigned to the correct fields via the next file:
-						<br />
-						schema.yml <br />
-						The schema file is used even if you don't define a custom table for your module - here you can see defaults being assigned to the fields of a configuration form.
+					<h3>Configuration</h3>
+					<ul class="font-25">
+						<li class="fragment">
+							Configuration is a place to store information you would like to synchronize from development to production. This information can be used in your own plugins, entities and settings.
+						</li>
+						<li class="fragment">
+							Lives under a /config directory
+							<ul>
+								<li class="fragment">
+									/install directory
+								</li>
+									<ul class="fragment">
+										<li>
+											Configuration defaults live under the /config/install directory
+										</li>
+										<li>
+											capable.settings.yml: This file stores configuration defaults, which are assigned to the correct fields via the next file
+										</li>
+									</ul>
+								<li class="fragment">
+									/schema directory
+									<ul class="fragment">
+										<li>
+											<a href="https://en.wikipedia.org/wiki/Database_schema">Schema</a>: the organization of the structure of the database
+										</li>
+										<li>
+											capable.schema.yml: define a custom table for your module
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Entities</h3>
+					<ul>
+						<li>
+							Entities are object that are used for persistent storage of content and configuration information
+						</li>
+					</ul>
+					https://www.drupal.org/docs/8/api/entity-api/introduction-to-entity-api-in-drupal-8 <br />
+					https://www.drupal.org/docs/8/api/entity-api/create-a-custom-content-entity
 				</section>
 
 				<section>
@@ -1185,6 +1216,17 @@ modules
 						<ul>
 							<li>
 								<a href="https://www.drupal.org/docs/8/creating-custom-modules/create-a-custom-block">https://www.drupal.org/docs/8/creating-custom-modules/create-a-custom-block</a>
+							</li>
+						</ul>
+					</div>
+					<div class="font-10 bib">
+						<h3>Configuration</h3>
+						<ul>
+							<li>
+								<a href="https://www.drupal.org/docs/8/api/configuration-api/configuration-api-overview">https://www.drupal.org/docs/8/api/configuration-api/configuration-api-overview</a>
+							</li>
+							<li>
+								<a href="https://www.drupal.org/docs/8/creating-custom-modules/defining-and-using-your-own-configuration-in-drupal-8">https://www.drupal.org/docs/8/creating-custom-modules/defining-and-using-your-own-configuration-in-drupal-8</a>
 							</li>
 						</ul>
 					</div>
