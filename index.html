@@ -635,15 +635,16 @@ modules
 					<h3>Configuration</h3>
 					<ul class="font-25">
 						<li class="fragment">
-							Configuration is a place to store information you would like to synchronize from development to production. This information can be used in your own plugins, entities and settings.
+							Configuration is a place to store information you would like to synchronize from development to production. This information can be used in your own plugins, <a href="https://www.drupal.org/docs/8/api/entity-api/introduction-to-entity-api-in-drupal-8">entities</a> (objects that are used for persistent storage of content and configuration information) and settings.
 						</li>
-						<li class="fragment">
+						<span class="fragment">
+						<li style="float: left; width: 50%; margin-right: 20px;">
 							Lives under a /config directory
 							<ul>
-								<li class="fragment">
+								<li>
 									/install directory
 								</li>
-									<ul class="fragment">
+									<ul>
 										<li>
 											Configuration defaults live under the /config/install directory
 										</li>
@@ -651,9 +652,9 @@ modules
 											capable.settings.yml: This file stores configuration defaults, which are assigned to the correct fields via the next file
 										</li>
 									</ul>
-								<li class="fragment">
+								<li>
 									/schema directory
-									<ul class="fragment">
+									<ul>
 										<li>
 											<a href="https://en.wikipedia.org/wiki/Database_schema">Schema</a>: the organization of the structure of the database
 										</li>
@@ -664,13 +665,22 @@ modules
 								</li>
 							</ul>
 						</li>
+							<img src="images/config-file-location.png" style="width: 40%"/>
+						</span>
 					</ul>
 				</section>
 
 				<section>
-					<h3>Entities</h3>
-					<span>Entities are objects that are used for persistent storage of content and configuration information
-					</span>
+					<h3>Configuration</h3>
+					<img src="images/config-settings.png" style="vertical-align: top;"/>
+					<img src="images/config-schema.png" style="vertical-align: top;"/>
+					<img src="images/config-database.png" />
+				</section>
+
+				<section>
+					<h3>Configuration</h3>
+					<img src="images/config-routing.png" style="vertical-align: top;"/>
+					<img src="images/config-controller.png" style="vertical-align: top;"/>
 				</section>
 
 				<section>
@@ -718,21 +728,6 @@ modules
 					<div class="right-40">
 						<img src="images/dynamic-permissions-screenshot.png" style="height: 500px;" class="fragment no-margin"/>
 					</div>
-				</section>
-
-				<section>
-					<h3>Dependency Injection</h3>
-					<ul class="font-25">
-						<li>
-							A object oriented programming software design process that supplies a resource the code it requires
-						</li>
-						<li>
-							The required resource is called a dependency
-						</li>
-						<li>
-							definition of service
-						</li>
-					</ul>
 				</section>
 
 				<section>
