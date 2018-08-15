@@ -401,68 +401,6 @@ modules
 				</section>
 
 				<section>
-					<h3>All the capable.routing.yml properties </h3>
-					<img src="images/standin-routing.png" class="left"/>
-					<div class="right font-10">
-						<ul>
-							<li><strong>path:</strong> Required, must begin with a forward slash (/), first item of the path must NOT be dynamic</li>
-							<li><strong>defaults:</strong> Requied, defines the default properties of a route.
-								<ul>
-									<li>
-										<strong>_controller:</strong> A callable value that returns:
-										<ul>
-											<li>
-												a renderable array, rendered into HTML and used as the content of a normal Drupal page
-											</li>
-											<li>
-												an Symfony\Component\HttpFoundation\Response object, example for a non-HTML XML feed
-											</li>
-											<li>
-												namespace: \Drupal\[module name]\Controller\[ClassName]::[method]
-											</li>
-											<li>
-												path: [module name]/src/Controller/[ClassName].php that contains a build() method
-											</li>
-											<li>
-												service: controller.test[method], where controller.test is a service definedint he dependency injection container // THIS NEEDS AN EXPLANATION
-											</li>
-										</ul>
-									</li>
-									<li><strong>_form:</strong></li>
-									<li><strong>_entity_view:</strong></li>
-									<li><strong>_entity_list:</strong></li>
-									<li><strong>_entity_form:</strong></li>
-									<li><strong>_title:</strong></li>
-									<li><strong>_title_arguments:</strong></li>
-									<li><strong>_title_context:</strong></li>
-								</ul>
-							</li>
-							<li><strong>methods: </strong>Optional, match the method of the incoming request. Should be enclosed in brackets, and separated by commas</li>
-							<li><strong>requirements:</strong></li>
-							<ul>
-								<li><strong>_permission: </strong></li>
-								<li><strong>_role: </strong></li>
-								<li><strong>_access: </strong></li>
-								<li><strong>_entity_access: </strong></li>
-								<li><strong>_custom_access: </strong></li>
-								<li><strong>_format: </strong></li>
-								<li><strong>_content_type_format: </strong></li>
-								<li><strong>_module_dependencies: </strong></li>
-								<li><strong>_csrf_token: </strong></li>
-							</ul>
-							<li><strong>options:</strong></li>
-							<ul>
-								<li><strong>_admin_route: </strong></li>
-								<li><strong>_auth: </strong></li>
-								<li><strong>_theme: </strong></li>
-								<li><strong>no_cache</strong></li>
-								<li><strong>parameters</strong></li>
-							</ul>
-						</ul>
-					</div>
-				</section>
-
-				<section>
 					<h3>Module Menu Link</h3>
 					<p class="font-25">Menu link to the module in the Development section of the Administration >> Configuration (/admin/config)</p>
 					<img src="images/capable-module-links-file.png" />
@@ -728,7 +666,7 @@ modules
 								Blocks are instances of the block <a href="https://www.drupal.org/developing/api/8/plugins">plugin</a>.
 							</li>
 							<li class="fragment">
-									Plugin code must live in /src/Plugin/[plugin_type/Example.php
+									Plugin code must live in /src/Plugin/[plugin_type]/Example.php
 								<ul>
 									<li>
 										Blocks: /src/Plugin/Block/*
