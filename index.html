@@ -622,6 +622,11 @@ modules
 				</section>
 
 				<section>
+					<h3>Configuration</h3>
+					<img src="images/config-screenshot.png" />
+				</section>
+
+				<section>
 					<h3>Permissions</h3>
 					<ul class="font-25">
 						<li class="fragment">
@@ -650,8 +655,41 @@ modules
 
 				<section>
 					<h3>Services</h3>
-					https://www.drupal.org/docs/8/api/plugin-api/why-plugins
+					<ul style="width: 50%; float: left; font-size: 32px;">
+						<li class="fragment">
+							A <a href="https://www.drupal.org/docs/8/api/services-and-dependency-injection">service</a> is any reusable PHP object that does something
+						</li>
+						<li class="fragment">
+							Managed by the services container
+						</li>
+						<li class="fragment">
+							Services performa operations like accessing the database, sending email or translating user interface text
+						</li>
+						<li class="fragment">
+							<a href="https://www.drupal.org/docs/8/api/services-and-dependency-injection/structure-of-a-service-file">[modulename].services.yml</a> will live in the root of the module
+						</li>
+					</ul>
+					<img src="images/services-files.png" />
 				</section>
+
+				<section>
+					<h3>Services</h3>
+					<img src="images/services-yml.png" style="vertical-align: top;"/>
+					<img src="images/capable-services.png" />
+				</section>
+
+				<section>
+					<h3>Services</h3>
+					<img src="images/services-router.png" style="width: 50%; vertical-align: top;"/>
+					<img src="images/services-controller.png" />
+				</section>
+
+				<section>
+					<h3>Services</h3>
+					<img src="images/services-screenshot.png" />
+
+				</section>
+
 				<section>
 					<h3>Plugins and Custom Blocks</h3>
 					<div class="left font-25">
@@ -1136,10 +1174,16 @@ modules
 					</div>
 
 					<div class="font-10 bib">
-						<h3>Dependency Injection + Services</h3>
+						<h3>Services</h3>
 						<ul>
 							<li>
-								<a href="https://searchmicroservices.techtarget.com/definition/dependency-injection">https://searchmicroservices.techtarget.com/definition/dependency-injection</a>
+								<a href="https://www.drupal.org/docs/8/api/services-and-dependency-injection/services-and-dependency-injection-in-drupal-8">https://www.drupal.org/docs/8/api/services-and-dependency-injection/services-and-dependency-injection-in-drupal-8</a>
+							</li>
+							<li>
+								<a href="https://symfony.com/doc/3.4/service_container.html">https://symfony.com/doc/3.4/service_container.html</a>
+							</li>
+							<li>
+								<a href="https://ffwagency.com/digital-strategies-blog/drupal-8-services-dependency-injection-and-decoupling-your-code">https://ffwagency.com/digital-strategies-blog/drupal-8-services-dependency-injection-and-decoupling-your-code</a>
 							</li>
 						</ul>
 					</div>
