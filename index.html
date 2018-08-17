@@ -258,23 +258,29 @@ modules
 						<li class="fragment">The info.yml file information can be found on the Drupal admin pages (/admin/modules)</li>
 						<li class="fragment">Technically, the only required file in your module (although the module won't do anything)</li>
 					</ul>
-					<img class="fragment" src="images/capable-module-info-file.png" />
+					<span class="fragment">
+						<img src="images/capable-module-info-file.png" />
+						<div class="font-20">capable.info.yml</div>
+					</span>
 				</section>
 
 				<section>
 					<h3>What's going on?</h3>
 					<div class="left-40">
 						<img src="images/capable-module-info-file.png"/>
+						<div class="font-20">capable.info.yml</div>
 					</div>
 					<div class="right-60">
 						<img src="images/capable-module-info-screenshot.png"/>
+						<div class="font-20">/admin/modules</div>
 					</div>
 				</section>
 
 				<section>
 					<h3>capable.info.yml complete example</h3>
-					<div class="left">
-						<img src="images/capable-module-info-file-2.png" class="fragment" />
+					<div class="fragment left">
+						<img src="images/capable-module-info-file-2.png"/>
+						<div class="font-20">capable.info.yml</div>
 					</div>
 					<div class="right font-16">
 						<ul>
@@ -326,7 +332,10 @@ modules
 						<li class="fragment">Following PSR-4, the controller file will live inside a folder called src, and then in a folder called Controller</li>
 						<li class="fragment">src stands for source</li>
 					</ul>
-					<img src="images/source-folder.png" class="fragment"/>
+					<span class="fragment">
+						<img src="images/source-folder.png"/>
+						<div class="font-20">capable/src/Controller/CapableController.php</div>
+					</span>
 					<ul class="font-25" style="width: 100%">
 						<li class="fragment">Need to declare a namespace at the top.</li>
 						<li class="fragment">Namespace format: Drupal\[module name]\Controller;</li>
@@ -336,7 +345,10 @@ modules
 
 				<section>
 					<h3>CapableController.php</h3>
-					<img src="images/capable-controller-file.png" style="float: left;"/>
+					<span style="float: left;">
+						<img src="images/capable-controller-file.png"/>
+						<div class="font-20">CapableController.php</div>
+					</span>
 					<ul class="font-20" style="float: right; width: 46%;">
 						<li class="fragment">
 							<strong>namespace Drupal\capable\Controller:</strong> declaring the namespace for the capable Controller class <br />
@@ -365,19 +377,34 @@ modules
 						<li class="fragment">The router determines which code should be run to generate the response.	</li>
 						<li class="fragment">The routing system is responsible for matching paths to controllers.</li>
 					</ul>
-					<img src="images/capable-module-routing-file.png" class="fragment" />
+					<span class="fragment">
+							<img src="images/capable-module-routing-file.png" />
+							<div class="font-20">capable/capable.routing.yml</div>
+					</span>
 				</section>
 
 				<section>
 					<h3>capable.routing.yml</h3>
-					<img src="images/routing-file-simple.png" />
+					<span>
+						<img src="images/routing-file-simple.png" />
+						<div class="font-20">capable.routing.yml</div>
+					</span>
 				</section>
 
 				<section>
-					<h3>Routing + Controller Working Together</h3>
-					<img src="images/routing-file-simple-outlined.png" style="height: 130px; vertical-align: top;"/>
-					<img src="images/capable-controller-file-outlined.png" style="height: 225px;"/>
-					<img src="images/routing-file-screenshot.png" style="height: 275px;" />
+					<h3>Routing and Controller Working Together</h3>
+					<span class="fragment">
+						<img src="images/routing-file-simple-outlined.png" style="height: 150px; vertical-align: top;"/>
+						<div class="font-20">capable.routing.yml</div>
+					</span>
+					<span style="float: left;" class="fragment">
+						<img src="images/capable-controller-file-outlined.png" style="height: 270px;"/>
+						<div class="font-20">CapableController.php</div>
+					</span>
+					<span style="float: right;" class="fragment">
+						<img src="images/routing-file-screenshot.png" style="height: 275px;" />
+						<div class="font-20">/hello</div>
+					</span>
 				</section>
 
 				<section>
@@ -386,36 +413,61 @@ modules
 						<li class="fragment">Parameters are used for URLs that may contain dynamic values. <br />
 							/parameters/[partial] would work for both /parameters/hello and /parameters/goodbye </li>
 						<li class="fragment"> The [partial] element in the url is called a slug, and is is avaible as a $partial in the controller method</li>
-						<li class="fragment">You can even have multiple parameters on a single route: product/[product#]/[color]</li>
+						<li class="fragment">You can even have multiple parameters on a single route: product/[productnumber]/[color]</li>
 						<div class="fragment">
-							<img src="images/router-parameters.png" class="left"/>
-							<img src="images/controller-parameters.png" class="right"/>
+							<span class="left">
+								<img src="images/router-parameters.png"/>
+								<div class="font-20" style="text-align: center;">capable.routing.php</div>
+							</span>
+							<span class="right">
+								<img src="images/controller-parameters.png"/>
+								<div class="font-20" style="text-align: center;">CapableController.php</div>
+							</span>
 						</div>
 					</ul>
 				</section>
 
 				<section>
 					<h3>Parameters in Routes</h3>
-					<img src="images/parameters-hello.png" style="width: 600px;"/>
-					<img src="images/parameters-goodbye.png" style="width: 600px;" />
+					<span>
+						<img src="images/parameters-hello.png" style="width: 600px;" class="no-margin"/>
+						<div class="font-20">/parameters/hello</div>
+					</span>
+					<span>
+						<img src="images/parameters-goodbye.png" style="width: 600px; margin-bottom: 0px;"/>
+						<div class="font-20">/parameters/goodbye</div>
+					</span>
 				</section>
 
 				<section>
 					<h3>Module Menu Link</h3>
 					<p class="font-25">Menu link to the module in the Development section of the Administration >> Configuration (/admin/config)</p>
 					<img src="images/capable-module-links-file.png" />
+					<div class="font-20">/capable/capable.links.menu.yml</div>
 				</section>
 
 				<section>
 					<h3>Module Menu Link</h3>
-					<img src="images/capable-module-links-menu.png" />
-					<img src="images/capable-module-links-routing.png" class="left"/>
-					<img src="images/capable-module-menu-controller.png" class="right"/>
+					<span>
+						<img src="images/capable-module-links-menu.png" class="no-margin"/>
+						<div class="font-20">capable.links.menu.yml</div>
+					</span>
+					<span class="left">
+						<img src="images/capable-module-links-routing.png"/>
+						<div class="font-20">capable.routing.yml</div>
+					</span>
+					<span class="right">
+						<img src="images/capable-module-menu-controller.png"/>
+						<div class="font-20">CapableController.php</div>
+					</span>
 				</section>
 
 				<section>
 					<h3>Module Menu Link Screenshot</h3>
-					<img src="images/capable-module-menu-links-screenshot.png" style="height: 500px;"/>
+					<span>
+						<img src="images/capable-module-menu-links-screenshot.png" style="height: 500px;"/>
+						<div class="font-20">/admin/config</div>
+					</span>
 				</section>
 
 				<section>
@@ -424,10 +476,12 @@ modules
 					<div class="left font-20">
 						External Link
 						<img src="images/capable-module-menu-links-external.png" />
+						<div class="font-20">capable.links.menu.yml</div>
 					</div>
 					<div class="right font-20">
 						Internal Link
 						<img src="images/capable-module-menu-links-internal.png"/>
+						<div class="font-20">capable.links.menu.yml</div>
 					</div>
 				</section>
 
@@ -475,9 +529,18 @@ modules
 
 				<section>
 					<h3>capable.module</h3>
-					<img src="images/capable-module-module-file.png" style="height: 200px; vertical-align: top;" class="fragment"/>
-					<img src="images/capable-module-module-file-code.png" style="height: 300px;" class="fragment"/>
-					<img src="images/capable-module-module-file-screenshot.png" style="height: 200px;" class="fragment" />
+					<div style="width: 40%; float: left;" class="fragment">
+						<img src="images/capable-module-module-file.png" />
+						<div class="font-20">capable/capable.module</div>
+					</div>
+					<div style="width: 50%; float: left;" class="fragment no-margin">
+						<img src="images/capable-module-module-file-code.png"/>
+						<div class="font-20">capable.module</div>
+					</div>
+					<div style="height: 200px;" class="fragment">
+						<img src="images/capable-module-module-file-screenshot.png" />
+						<div class="font-20">/admin/help/capable</div>
+					</div>
 				</section>
 
 				<section>
@@ -497,12 +560,7 @@ modules
 
 				<section>
 					<h3>composer.json</h3>
-
  				</section>
-
-				<section>
-					<h3>Composer</h3>
-				</section>
 
 				<section>
 					<h3>Forms</h3>
@@ -553,9 +611,11 @@ modules
 					<h3>CapableForm.php</h3>
 					<div class="left">
 						<img src="images/capable-form-routing-screenshot.png" />
+						<div class="font-20">capable.routing.yml</div>
 					</div>
 					<div class="right">
 						<img src="images/capable-form-screenshot.png" />
+						<div class="font-20">capable/src/Form/CapableForm.php</div>
 					</div>
 				</section>
 
@@ -563,9 +623,11 @@ modules
 					<h3>CapableForm.php</h3>
 					<div class="left">
 						<img src="images/capable-form-php-file.png" />
+						<div class="font-20">CapableForm.php</div>
 					</div>
 					<div class="right">
 						<img src="images/capable-form-screenshot-site.png" />
+						<div class="font-20">/capable/form</div>
 					</div>
 				</section>
 
@@ -603,22 +665,39 @@ modules
 								</li>
 							</ul>
 						</li>
-							<img src="images/config-file-location.png" style="width: 40%"/>
+							<span style="width: 40%">
+								<img src="images/config-file-location.png"/>
+								<div class="font-20">/capable/config/install/capable.settings.yml <br />
+									/capable/config/schema/capable.schema.yml
+								</div>
+							</span>
 						</span>
 					</ul>
 				</section>
 
 				<section>
 					<h3>Configuration</h3>
-					<img src="images/config-settings.png" style="vertical-align: top;"/>
-					<img src="images/config-schema.png" style="vertical-align: top;"/>
+					<div style="width: 50%; float:left;">
+						<img src="images/config-settings.png" style="vertical-align: top;"/>
+						<div class="font-20">capable.settings.yml</div>
+					</div>
+					<div style="width: 47%; float:left;">
+						<img src="images/config-schema.png" style="vertical-align: top;"/>
+						<div class="font-20">capable.schema.yml</div>
+					</div>
 					<img src="images/config-database.png" />
 				</section>
 
 				<section>
 					<h3>Configuration</h3>
-					<img src="images/config-routing.png" style="vertical-align: top;"/>
-					<img src="images/config-controller.png" style="vertical-align: top;"/>
+					<div style="float: left;">
+						<img src="images/config-routing.png" style="vertical-align: top;"/>
+						<div class="font-20">capable.routing.yml</div>
+					</div>
+					<div style="float: left;">
+						<img src="images/config-controller.png" style="vertical-align: top;"/>
+						<div class="font-20">CapableContoller.php</div>
+					</div>
 				</section>
 
 				<section>
@@ -1064,6 +1143,12 @@ modules
 							<a href="http://cgit.drupalcode.org/examples/tree/TESTING.md">TESTING.md</a>: details of how to test the module
 						</li>
 					</ul>
+				</section>
+
+				<section>
+					<h3>The Other Files</h3>
+					capable.api.php <br />
+					capable.data.inc
 				</section>
 
 				<section>
