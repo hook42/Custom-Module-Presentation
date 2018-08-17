@@ -749,7 +749,7 @@ modules
 							Managed by the services container
 						</li>
 						<li class="fragment">
-							Services performa operations like accessing the database, sending email or translating user interface text
+							Services perform operations like accessing the database, sending email or translating user interface text
 						</li>
 						<li class="fragment">
 							<a href="https://www.drupal.org/docs/8/api/services-and-dependency-injection/structure-of-a-service-file">[modulename].services.yml</a> will live in the root of the module
@@ -757,7 +757,7 @@ modules
 					</ul>
 					<div class="fragment" style="float: left;">
 						<img src="images/services-files.png"/>
-						<div class="font-20">/capable/src/CapableServices.php<br />
+						<div class="font-20">capable/src/CapableServices.php<br />
 							capable/capable.services.yml
 						</div>
 					</div>
@@ -777,14 +777,20 @@ modules
 
 				<section>
 					<h3>Services</h3>
-					<img src="images/services-router.png" style="width: 50%; vertical-align: top;"/>
-					<img src="images/services-controller.png" />
+					<div style="width: 50%; float: left">
+						<img src="images/services-router.png" style="vertical-align: top;"/>
+						<div class="font-20">capable.routing.yml</div>
+					</div>
+					<div style="width: 40%; float: left">
+						<img src="images/services-controller.png" />
+						<div class="font-20">CapableController.php</div>
+					</div>
 				</section>
 
 				<section>
 					<h3>Services</h3>
 					<img src="images/services-screenshot.png" />
-
+					<div class="font-20">/module/service</div>
 				</section>
 
 				<section>
@@ -818,6 +824,7 @@ modules
 					</div>
 					<div class="right fragment">
 						<img src="images/capable-custom-block-plugin-file-location.png" />
+						<div class="font-20">capable/src/Plugin/Block/CapableBlock.php</div>
 					</div>
 				</section>
 
@@ -825,9 +832,11 @@ modules
 					<h3>CapableBlock.php</h3>
 					<div class="left-40">
 						<img src="images/capable-custom-block-plugin-code.png" />
+						<div class="font-20">CapableBlock.php</div>
 					</div>
 					<div class="right-60">
 						<img src="images/capable-custom-block-plugin-screenshot.png" />
+						<div class="font-20">/admin/structure/block >> Capable Block</div>
 					</div>
 				</section>
 
@@ -859,9 +868,24 @@ modules
 
 				<section>
 					<h3>capable.libraries.yml</h3>
-					<img src="images/capable-libraries-file-location.png" class="fragment" style="vertical-align: top;"/>
-					<img src="images/capable-libraries-file.png"  class="fragment" style="vertical-align: top;"/>
-					<img src="images/css-js-assets.png" class="fragment" style="vertical-align: top;"/>
+					<div style="float: left; width: 32%;" class="fragment">
+						<img src="images/capable-libraries-file-location.png" style="vertical-align: top;"/>
+						<div class="font-20">capable/capable.libraries.yml</div>
+					</div>
+					<div style="float: left; width: 32%;" class="fragment" >
+						<img src="images/capable-libraries-file.png" style="vertical-align: top;"/>
+						<div class="font-20">capable.libraries.yml</div>
+					</div>
+					<div style="float: left; width: 32%;" class="fragment">
+						<img src="images/css-js-assets.png" style="vertical-align: top;"/>
+						<div class="font-20">capable/css/capable.form.css <br />
+							capable/css/capable.miscellaneous.css <br />
+							capable/css/capable.module.css <br />
+							capable/css/capable.template.css <br />
+							capable/css/capable.theme.css <br />
+							capable/js/main.js
+						</div>
+					</div>
 				</section>
 
 				<section>
@@ -897,11 +921,13 @@ modules
 					<h3>Globally Load a Library </h3>
 					<span class="font-20">Attach the library to all pages with hook_page_attachments in capable.module</span>
 					<img src="images/globally-attach-page-attachments.png" />
+					<div class="font-20">capable.module</div>
 				</section>
 
 				<section>
 					<h3>Globally Load a Library </h3>
-					<img src="images/globally-attach-screenshot.png" style="height: 350px" class="no-margin"/>
+					<img src="images/globally-attach-screenshot.png" style="height: 300px" class="no-margin"/>
+					<div class="font-20">/hello</div>
 					<img src="images/globally-attach-file-load.png" style="height: 200px"/>
 				</section>
 
@@ -910,37 +936,52 @@ modules
 					<div>
 						<span class="font-20">Attach the library in the render array buildForm function in the CapableForm.php file<br />
 						<code>$form['#attached']['library'][] = 'module-name/library-name'</code></span>
-						<img src="images/form-library-attached.png" />
+						<img src="images/form-library-attached.png" class="no-margin" />
+						<div class="font-20">CapableForm.php</div>
 					</div>
 				</section>
 
 				<section>
 					<h3>Load Library to a Form</h3>
-					<img src="images/form-library-attached-screenshot.png" style="height: 300px;" class="no-margin"/>
-					<img src="images/form-library-loading.png"/>
+					<div style="float: left; width: 60%;">
+						<img src="images/form-library-attached-screenshot.png"/>
+						<div class="font-20">/capable/form</div>
+					</div>
+					<div style="float: left; width: 35%;">
+						<img src="images/form-library-loading.png"/>
+					</div>
 				</section>
 
 				<section>
 					<h3>Load a Library to an element</h3>
 					<span class="font-20">Attach a library to a specific <code>#type</code>: the library only loads if that #type exists</span>
-					<img src="images/type-select.png" style="height: 160px; float: left;"/>
-					<img src="images/capable-element-info-alter.png" style="height: 400px; float: right;"/>
+					<div style="width: 50%; float: left;">
+						<img src="images/type-select.png"/>
+						<div class="font-20">CapableForm.php</div>
+					</div>
+					<div style="width: 45%; float: right;">
+						<img src="images/capable-element-info-alter.png"/>
+						<div class="font-20">capable.module</div>
+					</div>
 				</section>
 
 				<section>
 					<h3>Load a Library to an element</h3>
-					<img src="images/form-library-type-attached-screenshot.png" />
+					<img src="images/form-library-type-attached-screenshot.png" style="height: 500px;"/>
+					<div class="font-20">/capable/form</div>
 				</section>
 
 				<section>
-					<h3>Load a Library to a twig template</h3>
-					<span class="font-20"><code>{{ attach_library('your_module/library_name') }}</code></span><br />
-					<img src="images/wecome-html-twig-file.png" style="height: 500px;"/>
+					<h3 class="no-margin">Load a Library to a twig template</h3>
+					<span class="font-20"><code>{{ attach_library('your_module/library_name') }}</code></span>
+					<img src="images/wecome-html-twig-file.png" style="height: 450px;"/>
+					<div class="font-20">/templates/welcome.html.twig</div>
 				</section>
 
 				<section>
 					<h3>Load a Library to a twig template</h3>
 					<img src="images/welcome-page-screenshot.png" />
+					<div class="font-20">/welcome</div>
 				</section>
 
 				<section>
@@ -991,8 +1032,13 @@ modules
 
 				<section>
 					<h3>CSS Weights</h3>
-					<img src="images/css-loading-weights.png" style="vertical-align: top;"/>
-					<img src="images/capable-libraries-file.png" />
+					<div style="float: left;">
+						<img src="images/css-loading-weights.png" style="vertical-align: top;"/>
+					</div>
+					<div style="float: left;">
+						<img src="images/capable-libraries-file.png" />
+						<div class="font-20">capable.libraries.yml</div>
+					</div>
 				</section>
 
 				<section>
@@ -1008,33 +1054,47 @@ modules
 						<li>
 							jQuery<a href="https://www.drupal.org/node/1541860"> does not automatically load</a> on all pages in D8
 						</li>
-						<img src="images/javascript-jquery-file.png" />
-						<img src="images/javascript-include-jquery.png"/>
+						<div style="float: left; text-align: center;">
+							<img src="images/javascript-jquery-file.png" />
+							<div class="font-20">main.js</div>
+						</div>
+						<div style="float: left; text-align: center;">
+							<img src="images/javascript-include-jquery.png"/>
+							<div class="font-20">capable.libraries.yml</div>
+						</div>
 					</ul>
 					</section>
 
 				<section>
 					<h3>jQuery</h3>
 					<img src="images/javascript-screenshot.png"/>
+					<div class="font-20">/hello</div>
 				</section>
 
 				<section>
-				<h3>Configurable Javascript</h3>
-				<ul class="font-25">
-					<li>
-						Use configurable JavaScript when you use JavaScript that works with computed PHP information
-					</li>
-					<li>
-						Need to attach drupalSettings to the library and attach that library
-					</li>
-				</ul>
-				<img src="images/configurable-javascript-form.png" style="vertical-align: top;"/>
-				<img src="images/configurable-javascript-js-file.png" />
+					<h3>Configurable Javascript</h3>
+					<ul class="font-20">
+						<li>
+							Use configurable JavaScript when you use JavaScript that works with computed PHP information
+						</li>
+						<li>
+							Need to attach drupalSettings to the library and attach that library
+						</li>
+					</ul>
+					<div style="float: left;">
+						<img src="images/configurable-javascript-form.png" style="vertical-align: top;"/>
+						<div class="font-20">CapableForm.php</div>
+					</div>
+					<div style="float: left;">
+						<img src="images/configurable-javascript-js-file.png" />
+						<div class="font-20">main.js</div>
+					</div>
 				</section>
 
 				<section>
 					<h3>Configurable Javascript</h3>
 					<img src="images/configurable-javascript-screenshot.png" style="height: 500px;"/>
+					<div class="font-20">/capable/form</div>
 				</section>
 
 				<section>
@@ -1043,6 +1103,7 @@ modules
 						Improves load speed, but will need to declare that the library is external
 					</p>
 					<img src="images/javascript-external.png" />
+					<div class="font-20">capable.libraries.yml</div>
 				</section>
 
 				<section>
@@ -1054,6 +1115,12 @@ modules
 						<li class="fragment">
 							The <a href="https://www.drupal.org/docs/8/theming/twig"> *.html.twig files</a> have replaced the *.tpl.php files of Drupal 7
 						</li>
+						<li class="fragment">
+							Lives under /templates folder
+						</li>
+					</ul>
+						<img src="images/templates-file-location.png" class="fragment" style="margin-left: auto; margin-right: auto; display: block;"/>
+					<ul class="font-25" style="float: left;">
 						<li class="fragment">
 							Steps to create custom twig templates for custom module
 							<ol class="fragment">
@@ -1074,18 +1141,31 @@ modules
 				<section>
 					<h3>1. Define the hook_theme</h3>
 					<img src="images/capable-module-twig.png" />
+					<div class="font-20">capable.module</div>
 				</section>
 
 				<section>
 					<h3>2. Call the template</h3>
-					<img src="images/capable-controller-twig.png" />
-					<img src="images/capable-router-twig.png" style="vertical-align: top;"/>
+					<div style="float: left; width: 50%;">
+						<img src="images/capable-controller-twig.png" />
+						<div class="font-20">CapableController.php</div>
+					</div>
+					<div style="float: left; width: 45%;">
+						<img src="images/capable-router-twig.png" style="vertical-align: top;"/>
+						<div class="font-20">capable.routing.yml</div>
+					</div>
 				</section>
 
 				<section>
 					<h3>3. Create the twig template</h3>
-					<img src="images/capable-module-templates-folder.png" style="height:500px;"/>
-					<img src="images/twig-template.png"  style="height:500px;"/>
+					<div style="float: left; width: 50%;">
+						<img src="images/capable-module-templates-folder.png" style="height:500px;"/>
+						<div class="font-20">capable/templates/welcome.html.twig</div>
+					</div>
+					<div style="float: left;">
+						<img src="images/twig-template.png"  style="height:500px;"/>
+						<div class="font-20">welcome.html.twig</div>
+					</div>
 				</section>
 
 				<section>
@@ -1124,8 +1204,14 @@ modules
 
 				<section>
 					<h3>Testing</h3>
-					<img src="images/capable-test-file-location.png" />
-					<img src="images/capable-test-file.png" style="vertical-align: top;" />
+					<div style="float: left; width: 50%;">
+						<img src="images/capable-test-file-location.png" />
+						<div class="font-20">capable/tests/src/Unit/CapableExampleTest.php</div>
+					</div>
+					<div style="float: left;">
+						<img src="images/capable-test-file.png" style="vertical-align: top;" />
+						<div class="font-20">capable/templates/welcome.html.twig</div>
+					</div>
 				</section>
 
 				<section>
@@ -1137,7 +1223,10 @@ modules
 						<li class="fragment">
 							Navigate to admin/config/development/testing
 						</li>
-						<img src="images/capable-test-before.png" style="height: 200px;" class="fragment"/>
+						<div class="fragment">
+							<img src="images/capable-test-before.png" style="height: 200px;" class="no-margin"/>
+							<div class="font-20" style="text-align: center;">/admin/config/development/testing</div>
+						</div>
 						<li class="fragment">
 							Select the group name
 						</li>
@@ -1223,6 +1312,9 @@ modules
 							<li>
 								<a href="https://api.drupal.org/api/examples">https://api.drupal.org/api/examples</a>
 							</li>
+							<li>
+								<a href="https://www.drupal.org/project/examples">https://www.drupal.org/project/examples</a>
+							</li>
 						</ul>
 					</div>
 					<div class="font-10 bib">
@@ -1244,15 +1336,6 @@ modules
 							<li><a href="https://books.google.com/books?id=pM7cDgAAQBAJ&pg=PA554&lpg=PA554&dq=drupal+8+dynamic+permissions&source=bl&ots=TXWp9eVH4h&sig=r-KIhVu4wZXGu2RxG5ilCMEedNI&hl=en&sa=X&ved=0ahUKEwixxKWI9_HbAhVvCTQIHfMxAcg4HhDoAQhTMAg#v=onepage&q=drupal%208%20dynamic%20permissions&f=false">Drupal 8: Enterprise Web Development</a></li>
 						</ul>
 					</div>
-
-					<div class="font-10 bib">
-						<h3>Plugins and Custom Blocks</h3>
-						<ul>
-							<li>
-								<a href="https://www.drupal.org/docs/8/creating-custom-modules/create-a-custom-block">https://www.drupal.org/docs/8/creating-custom-modules/create-a-custom-block</a>
-							</li>
-						</ul>
-					</div>
 					<div class="font-10 bib">
 						<h3>Configuration</h3>
 						<ul>
@@ -1265,18 +1348,6 @@ modules
 						</ul>
 					</div>
 					<div class="font-10 bib">
-						<h3>Composer</h3>
-						<ul>
-							<li>
-								<a href="https://www.drupal.org/docs/8/creating-custom-modules/add-a-composerjson-file">https://www.drupal.org/docs/8/creating-custom-modules/add-a-composerjson-file</a>
-							</li>
-							<li>
-								<a href="https://www.drupal.org/docs/develop/using-composer/managing-dependencies-for-a-custom-project">https://www.drupal.org/docs/develop/using-composer/managing-dependencies-for-a-custom-project</a>
-							</li>
-						</ul>
-					</div>
-
-					<div class="font-10 bib">
 						<h3>Services</h3>
 						<ul>
 							<li>
@@ -1288,15 +1359,20 @@ modules
 							<li>
 								<a href="https://ffwagency.com/digital-strategies-blog/drupal-8-services-dependency-injection-and-decoupling-your-code">https://ffwagency.com/digital-strategies-blog/drupal-8-services-dependency-injection-and-decoupling-your-code</a>
 							</li>
+							<li>
+								<a href="https://valuebound.com/resources/blog/how-to-define-your-own-services-drupal-8">https://valuebound.com/resources/blog/how-to-define-your-own-services-drupal-8</a>
+							</li>
 						</ul>
 					</div>
 					<div class="font-10 bib">
-						<h3>Forms</h3>
+						<h3>Composer</h3>
 						<ul>
-							<li><a href="https://www.drupal.org/docs/8/api/form-api/introduction-to-form-api">https://www.drupal.org/docs/8/api/form-api/introduction-to-form-api</a></li>
-							<li><a href="https://valuebound.com/resources/blog/step-by-step-method-to-create-a-custom-form-in-drupal-8">https://valuebound.com/resources/blog/step-by-step-method-to-create-a-custom-form-in-drupal-8</a></li>
-							<li><a href="https://www.velir.com/blog/2016/01/04/technical-guide-drupal-8-forms">https://www.velir.com/blog/2016/01/04/technical-guide-drupal-8-forms</a></li>
-							<li><a href="http://cgit.drupalcode.org/examples/tree/form_api_example">http://cgit.drupalcode.org/examples/tree/form_api_example</a></li>
+							<li>
+								<a href="https://www.drupal.org/docs/8/creating-custom-modules/add-a-composerjson-file">https://www.drupal.org/docs/8/creating-custom-modules/add-a-composerjson-file</a>
+							</li>
+							<li>
+								<a href="https://www.drupal.org/docs/develop/using-composer/managing-dependencies-for-a-custom-project">https://www.drupal.org/docs/develop/using-composer/managing-dependencies-for-a-custom-project</a>
+							</li>
 						</ul>
 					</div>
 					<div class="font-10 bib">
@@ -1315,9 +1391,6 @@ modules
 								<a href="https://www.drupal.org/docs/8/creating-custom-modules/adding-stylesheets-css-and-javascript-js-to-a-drupal-8-module">https://www.drupal.org/docs/8/creating-custom-modules/adding-stylesheets-css-and-javascript-js-to-a-drupal-8-module</a>
 							</li>
 							<li>
-								<a href="https://www.drupal.org/node/1887922">https://www.drupal.org/node/1887922</a>
-							</li>
-							<li>
 								<a href="https://docs.acquia.com/tutorials/fast-track-drupal-8-coding/define-custom-template-module-output/">https://docs.acquia.com/tutorials/fast-track-drupal-8-coding/define-custom-template-module-output/</a>
 							</li>
 							<li>
@@ -1329,6 +1402,15 @@ modules
 							<li>
 								<a href="http://cgit.drupalcode.org/examples/tree/js_example">http://cgit.drupalcode.org/examples/tree/js_example</a>
 							</li>
+						</ul>
+					</div>
+					<div class="font-10 bib">
+						<h3>Forms</h3>
+						<ul>
+							<li><a href="https://www.drupal.org/docs/8/api/form-api/introduction-to-form-api">https://www.drupal.org/docs/8/api/form-api/introduction-to-form-api</a></li>
+							<li><a href="https://valuebound.com/resources/blog/step-by-step-method-to-create-a-custom-form-in-drupal-8">https://valuebound.com/resources/blog/step-by-step-method-to-create-a-custom-form-in-drupal-8</a></li>
+							<li><a href="https://www.velir.com/blog/2016/01/04/technical-guide-drupal-8-forms">https://www.velir.com/blog/2016/01/04/technical-guide-drupal-8-forms</a></li>
+							<li><a href="http://cgit.drupalcode.org/examples/tree/form_api_example">http://cgit.drupalcode.org/examples/tree/form_api_example</a></li>
 						</ul>
 					</div>
 					<div class="font-10 bib">
@@ -1345,6 +1427,14 @@ modules
 							</li>
 							<li>
 								<a href="https://drupal.stackexchange.com/questions/196755/why-is-my-unit-test-not-detected">https://drupal.stackexchange.com/questions/196755/why-is-my-unit-test-not-detected</a>
+							</li>
+						</ul>
+					</div>
+					<div class="font-10 bib">
+						<h3>Plugins and Custom Blocks</h3>
+						<ul>
+							<li>
+								<a href="https://www.drupal.org/docs/8/creating-custom-modules/create-a-custom-block">https://www.drupal.org/docs/8/creating-custom-modules/create-a-custom-block</a>
 							</li>
 						</ul>
 					</div>
