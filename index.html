@@ -52,7 +52,7 @@
 						<div class="fragment ol-image">
 							<img src="images/noideawhatsgoingon.gif" />
 						</div>
-						<p class="fragment">I didn't want to just know how to make a custom module, I wanted to know the answers to all my why questions</p>
+						<p class="fragment">I didn't want to just know <em>how</em> to make a custom module, I wanted to know the answers to all my <em>why</em> questions</p>
 					</span>
 				</section>
 
@@ -138,7 +138,7 @@
 						<li><strong>EventDispatcher:</strong> lets components communicate with each other</li>
 						<li><strong>HttpFoundation:</strong> defined an object-oriented layer for the HTTP specification</li>
 						<li><strong>HttpKernel:</strong> converts a HTTP Request into a HTTP Respose by using a EventDispatcher component</li>
-						<li><strong>Process:</strong> executes commands in subprocesses, creates APi for shell executions https://symfony.com/doc/current/components/process.html</li>
+						<li><strong>Process:</strong> executes commands in subprocesses, creates API for shell executions https://symfony.com/doc/current/components/process.html</li>
 						<li><strong>Routing:</strong> maps an HTTP request to a set of configurable variables</li>
 						<li><strong>Serializer:</strong> turn objects into specific formats (YAML) and specific formats into objects</li>
 						<li><strong>Translation:</strong> provides tools for internationalization</li>
@@ -168,7 +168,7 @@
 					<h3>Types of files:</h3>
 					<ul>
 						<li class="fragment">YAML (YAML Ain't Markup Language): .yml, .yaml</li>
-						<li class="fragment">PHP: Hypertext Preprocessor: .php </li>
+						<li class="fragment">PHP - Hypertext Preprocessor: .php </li>
 						<li class="fragment">Markdown: .md</li>
 						<li class="fragment">Javascript Object Notation (JSON): .json</li>
 						<li class="fragment"> Module: .module</li>
@@ -181,7 +181,7 @@
 					<h3>Naming the module</h3>
 					<ul>
 						<li class="fragment">Start with a letter</li>
-						<li class="fragment">Contain only lower-case letters and underscores</li>
+						<li class="fragment">Use only lower-case letters and underscores</li>
 						<li class="fragment">No spaces</li>
 						<li class="fragment">Unique name</li>
 						<li class="fragment">Does not contain any reserved words: src, lib, vendor, assets, css, files, images, js, misc, templates, includes, fixtures, Drupal</li>
@@ -511,7 +511,7 @@ modules
 							Hooks in Drupal let modules interact with other modules or Drupal core
 						</li>
 						<li class="fragment">
-							Hooks can be thought of event listeners that fire off when a certain event triggers them, and can be used at various code execution point
+							Hooks can be thought of event listeners that fire off when a certain event triggers them, and can be used at various code execution points
 						</li>
 						<li class="fragment">
 							In Drupal 8, some hooks have remained the same, some have been removed, others have been modified, and some have been added. <a href="https://api.drupal.org/api/drupal/core%21core.api.php/group/hooks/8.5.x">For the entire list of core hooks, click here. </a>
@@ -550,7 +550,7 @@ modules
 							If your module has a dependency to a third party library hosted on Packagist, you can define this dependency
 						</li>
 						<li class="fragment">
-							Also declared dependencies in your info.yml file, but composer.json can let you get more specific with constraints
+							MUST declare dependencies in your info.yml file, but composer.json can let you get more specific with constraints
 						</li>
 						<li class="fragment">
 							If your module does not have any dependencies, composer.json is not required, but having it will not have a negative impact
