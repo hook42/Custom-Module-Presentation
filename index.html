@@ -544,7 +544,7 @@ modules
 				</section>
 
 				<section>
-					<h3>composer.json</h3>
+					<h3>Composer</h3>
 					<ul class="font-25">
 						<li class="fragment">
 							If your module has a dependency to a third party library hosted on <a href="https://packagist.org/">Packagist</a>, you can define this dependency
@@ -555,12 +555,57 @@ modules
 						<li class="fragment">
 							If your module does not have any dependencies, composer.json is not required, but having it will not have a negative impact
 						</li>
+						<li class="fragment">
+							Drupal core will NOT automatically find your custom module composer.json,
+						</li>
 					</ul>
 				</section>
 
 				<section>
-					<h3>composer.json</h3>
+					<h3 class="font-25">Tell root composer.json about your custom module's composer.json</h3>
+					<ul class="font-20" style="list-style-type: none;">
+						<li class="fragment">1. <code>composer require wikimedia/composer-merge-plugin</code></li>
+						<li class="fragment">2.	Edit root composer file</li>
+					</ul>
+					<span class="fragment">
+						<img src="images/root-composer-file.png" class="no-margin" style="height: 500px;"/>
+						<p class="font-16 no-margin">root/composer.json</p>
+					</span>
  				</section>
+
+				<section>
+					<h3>Capable composer.json</h3>
+					<ul class="font-20" style="list-style-type: none;">
+						<li class="fragment">3. create custom module composer file</li>
+					</ul>
+					<div class="fragment">
+						<img src="images/composer-file-location.png" />
+						<div class="font-20">
+							root/composer.json
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<h3>Composer File</h3>
+					<img src="images/composer-json-file.png" />
+					<div class="font-20">
+						capable/composer.json
+					</div>
+				</section>
+
+				<section>
+					<h3>Composer Update</h3>
+					<ul class="font-20" style="list-style-type: none;">
+						<li class="fragment">4. Run <code>composer update</code> in your root composer.json</li>
+					</ul>
+					<div class="fragment">
+						<img src="images/composer-update.png" />
+						<div class="font-20">
+							capable/composer.json
+						</div>
+					</div>
+				</section>
 
 				<section>
 					<h3>Forms</h3>
@@ -574,7 +619,7 @@ modules
 							</ul>
 						</li>
 						<li class="fragment">
-							Need to idenfity the type of form you need
+							Need to identify the type of form you need
 						</li>
 						<ul class="fragment">
 							<li>
@@ -1381,6 +1426,9 @@ modules
 							</li>
 							<li>
 								<a href="https://www.drupal.org/docs/develop/using-composer/managing-dependencies-for-a-custom-project">https://www.drupal.org/docs/develop/using-composer/managing-dependencies-for-a-custom-project</a>
+							</li>
+							<li>
+								<a href="https://www.drupal.org/node/2718229">https://www.drupal.org/node/2718229</a>
 							</li>
 						</ul>
 					</div>
